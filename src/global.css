@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* Global Styles, affects root element */
+:root {
+    --primaryColor: #F4F4F9;
+    --secondaryColor: #050505;
+    --accentColor: #e74c3c;
+
+    --textColor: #000000;
+
+    --navbarHeight: 64px;
+}
+
+/* Affects ONLY the body tag */
+body {
+    width: 100%;
+    height: auto;
+    
+    color: var(--textColor);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Affects every element on the page */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-display: swap;
+    font-family: Bradford LL;
+    font-weight: 450;
+    src: url(assets/fonts/BradfordLLWeb-Regular.woff2) format("woff2")
+}
+
+@font-face {
+    font-display: swap;
+    font-family: Bradford LL;
+    font-style: italic;
+    font-weight: 450;
+    src: url(assets/fonts/BradfordLLWeb-Italic.woff2) format("woff2")
+}
+
+.interSubtitle {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+
+    font-weight: 450;
+    letter-spacing: 0.02em;
+}

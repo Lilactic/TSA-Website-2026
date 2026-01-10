@@ -1,0 +1,39 @@
+header {
+  width: 100%;
+  height: var(--navbarHeight);
+
+  padding: 0px 128px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.homeLink {
+    font-family: Bradford LL;
+    font-weight: 450;
+    letter-spacing: -0.02em;
+
+    cursor: pointer;
+}
+
+.navigation {
+    height: 100%;
+    width: auto;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navigationLink {
+    margin-left: 32px;
+
+    cursor: pointer;
+}
