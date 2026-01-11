@@ -52,6 +52,11 @@
   align-items: center;
 }
 
+.questionButton:hover {
+  color: var(--accentColor);
+  transition: color 0.3s ease;
+}
+
 .faqAnswer {
   font-family: 'inter', sans-serif;
   font-weight: 400;

@@ -99,12 +99,11 @@
   border-top-right-radius: 11px;
   border-bottom-right-radius: 11px;
   background-color: var(--accentColor);
-}
-
-.searchButtonImage {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
+  color: var(--textColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
 .description {
@@ -168,7 +167,7 @@
   border-radius: 8px;
   border: 2px solid var(--secondaryColor);
   background-color: var(--primaryColor);
-  box-shadow: var(--shadow-elevation-low);
+  box-shadow: var(--shadow-elevation-medium);
   padding: 16px;
   display: flex;
   flex-direction: column;
@@ -197,7 +196,7 @@
     font-family: 'inter', sans-serif;
     font-weight: 400;
     font-size: 1.5rem;
-    margin-right: 16px;
+    width: 168px;
 }
 
 .cardButton {
@@ -205,12 +204,9 @@
   cursor: pointer;
   height: 50px;
   width: 55px;
-}
-
-.cardButtonImage {
-  height: 40px;
-  width: 40px;
-  object-fit: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .cardTagGrid {
