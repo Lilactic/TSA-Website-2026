@@ -39,3 +39,8 @@ header {
     margin-left: 32px;
     cursor: pointer;
 }
+
+.link {
+    text-decoration: none;
+    color: inherit;
+}

@@ -1,14 +1,13 @@
-import Footer from './components/footer'
-import Navbar from './components/navbar'
-import TypingText from './components/typingText'
-import Calendar from './components/calendar'
-import './global.css'
-import foodBank from './assets/images/foodbank.webp'
-import heroBG from './assets/images/heroBG2.png'
-import foodBankExt from './assets/images/foodbankExt.webp'
-import upRightArrow from './assets/images/upRightArrow.png'
-import searchIcon from './assets/images/searchIcon.png'
-import library from './assets/images/library.jpg';
+import Footer from '../../components/footer'
+import Navbar from '../../components/navbar'
+import TypingText from '../../components/typingText'
+import Calendar from '../../components/calendar'
+import '../../global.css'
+import foodBank from '../../assets/images/foodbank.webp'
+import heroBG from '../../assets/images/heroBG2.png'
+import upRightArrow from '../../assets/images/upRightArrow.png'
+import searchIcon from '../../assets/images/searchIcon.png'
+import library from '../../assets/images/library.jpg';
 import styles from './Home.module.css'
 
 function Home() {
