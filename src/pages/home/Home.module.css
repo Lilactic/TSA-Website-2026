@@ -1,6 +1,5 @@
 .main {
   background-color: var(--primaryColor);
-  padding-top: var(--navbarHeight);
 
   display: flex;
   flex-direction: column;
@@ -12,6 +11,8 @@
 .hero {
   width: 100%;
   height: calc(100vh - var(--navbarHeight));
+
+  position: relative;
 
   display: flex;
   justify-content: center;
