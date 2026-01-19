@@ -17,14 +17,6 @@ header {
   z-index: 1000;
 }
 
-.homeLink {
-    font-family: Bradford LL;
-    font-weight: 450;
-    letter-spacing: -0.02em;
-
-    cursor: pointer;
-}
-
 .navigation {
     height: 100%;
     width: auto;
@@ -84,4 +76,133 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.mobileLink {
+    text-decoration: none;
+    color: inherit;
+
+    height: auto;
+    width: 100%;
+
+    padding-bottom: 16px;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.mobileLink:hover .navigationLink::after {
+    transform: scaleX(1);
+    transform-origin: left;
+    background: black;
+}
+
+.mobileLink:not(:hover) .navigationLink::after {
+    transform: scaleX(0);
+    transform-origin: right;
+    background: linear-gradient(to right, black 100%, rgba(0,0,0,0) 100%);
+}
+
+.mobileNavButton {
+    position: relative;
+    display: none;
+    height: 40%;
+    aspect-ratio: 1;
+
+    outline: none;
+    border: none;
+
+    cursor: pointer;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.mobileNavButtonLine {
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    border-radius: 100px;
+    background-color: var(--secondaryColor);
+
+    transition: 0.15s ease;
+}
+
+.line1Active {
+    transform: rotate(45deg);
+}
+
+.line2Active {
+    transform: rotate(-45deg);
+}
+
+.line3 {
+    top: 10%;
+}
+
+.line3Active {
+    top: calc(50% - 2px);
+    transform: scaleX(0);
+}
+
+.line4 {
+    bottom: 10%;
+}
+
+.line4Active {
+    bottom: calc(50% - 2px);
+    transform: scaleX(0);
+}
+
+.mobileNavWindow {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    bottom: 0;
+
+    width: 256px;
+
+    background-color: var(--primaryColor);
+    box-shadow: var(--shadow-elevation-medium);
+    z-index: 998;
+
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    padding: 32px;
+
+    padding-top: calc(32px + var(--navbarHeight));
+
+    transition: 0.3s ease-in-out;
+}
+
+@media (max-width: 1050px) {
+    .navigation {
+        display: none;
+    }
+
+    .mobileNavButton {
+        display: flex;
+    }
+
+    .mobileNavWindow {
+        display: flex;
+    }
+}
+
+@media (max-width: 670px) {
+    header {
+        padding: 0px 64px;
+    }
+}
+
+@media (max-width: 520px) {
+    .homeLink {
+        width: 100px;
+        line-height: 1em;
+    }
 }

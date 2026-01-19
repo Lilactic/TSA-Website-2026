@@ -17,12 +17,13 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+    flex-wrap: wrap;
 
     gap: 32px;
 }
 
 .footerColumn {
-    height: 100%;
+    height: auto;
     width: auto;
 
     position: relative;
@@ -37,7 +38,7 @@
 
 
 .footerColumn2 {
-    height: 100%;
+    height: auto;
     width: auto;
 
     max-width: 200px;
@@ -83,12 +84,12 @@
 }
 
 .contactLinks {
-    height: 48px;
+    height: auto;
     width: 100%;
 }
 
 .contactImg {
-    height: 100%;
+    height: 48px;
     aspect-ratio: 1;
 
     object-fit: cover;
