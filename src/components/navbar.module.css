@@ -36,20 +36,52 @@ header {
 }
 
 .navigationLink {
-    margin-left: 32px;
+    position: relative;
     cursor: pointer;
+    display: flex;
+    height: auto;
+
+    flex-grow: none;
+    align-self: center;
+}
+
+.navigationLink::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  
+  background: linear-gradient(to right, black 100%, rgba(0,0,0,0) 100%);
+  
+  transform: scaleX(0);
+  transform-origin: left;
+  
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), 
+              background 0.5s ease;
+}
+
+.link:hover .navigationLink::after {
+    transform: scaleX(1);
+    transform-origin: left;
+    background: black;
+}
+
+.link:not(:hover) .navigationLink::after {
+    transform: scaleX(0);
+    transform-origin: right;
+    background: linear-gradient(to right, black 100%, rgba(0,0,0,0) 100%);
 }
 
 .link {
     text-decoration: none;
     color: inherit;
 
+    height: 100%;
+    padding-left: 32px;
+
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.navigationLink:hover {
-    color: var(--accentColor);
-    transition: color 0.3s ease;
 }

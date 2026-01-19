@@ -6,7 +6,7 @@ import { TentTree, TreeDeciduous } from 'lucide-react';
 function Navbar() {
   return (
     <header>
-      <Link className={styles.link} to="/">
+      <Link className={styles.link} to="/" style={{paddingLeft: "0px"}}>
         <TentTree size={28} strokeWidth={2} style={{marginRight: "12px", marginBottom: "1px"}}/>
         <h2 className='bradfordHeader'>Friendswood Resources</h2>
       </Link>

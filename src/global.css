@@ -9,7 +9,7 @@
     --textColor: #000000;
     --lightTextColor: #444444;
     
-    --navbarHeight: 64px;
+    --navbarHeight: 80px;
     --shadow-color: 0deg 0% 66%;
     --shadow-elevation-low:
         0.3px 0.5px 0.8px hsl(var(--shadow-color) / 0.11),
