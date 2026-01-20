@@ -7,7 +7,7 @@ import styles from './Resources.module.css'
 import heroBG from '../../assets/images/heroBG2.png'
 import stevensonPark from '../../assets/images/stevensonPark.webp'
 
-import { CarFront, CircleParking, FerrisWheel, LocateFixed, MapPin, Trees, WavesLadder } from 'lucide-react'
+import { CarFront, FerrisWheel, LocateFixed, MapPin, Trees, WavesLadder } from 'lucide-react'
 
 function Resources() {
   return (
