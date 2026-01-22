@@ -4,13 +4,13 @@
 
     background-color: var(--primaryColor);
 
-    border-top: 3px solid var(--secondaryColor);
+    border-top: 4px solid var(--secondaryColor);
 }
 
 .topSection {
     height: auto;
     width: 100%;
-    border-bottom: 3px solid var(--secondaryColor);
+    border-bottom: 4px solid var(--secondaryColor);
 
     padding: 32px;
     padding-bottom: 64px;

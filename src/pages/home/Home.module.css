@@ -28,6 +28,11 @@
   top: 0;
   left: 0;
   right: 0;
+
+  border-bottom: 1.5px solid var(--lightTextColor);
+
+  background-color: #f4f4f9;
+background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%239C92AC' fill-opacity='0.15'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
 .content {
@@ -193,6 +198,8 @@
   height: auto;
   padding: 64px 128px;
   position: relative;
+
+  margin-bottom: 64px;
 }
 
 .eventsContainer {
@@ -319,6 +326,8 @@
   justify-content: center;
   align-items: center;
   padding: 64px 128px;
+
+  margin-bottom: 128px;
 }
 
 .callToActionContainer {
@@ -328,33 +337,45 @@
   flex-direction: column;
   justify-content: center;
   align-items: left;
-  border: 2px solid var(--secondaryColor);
+  border: 4px solid var(--secondaryColor);
   border-radius: 16px;
   padding: 64px 64px;
 }
 
-.callToActionText {
-  font-family: Bradford LL;
-  font-weight: 450;
-  font-size: 3rem;
-  letter-spacing: -0.02em;
-}
-
 .callToActionButton {
   display: flex;
-  margin-top: 32px;
-  height: 35px;
-  width: 220px;
+  margin-top: 48px;
+  height: 48px;
+  width: min-content;
   border-radius: 8px;
-  border: 2px solid var(--secondaryColor);
+  border: 4px solid var(--secondaryColor);
   background-color: none;
   font-family: 'inter', sans-serif;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 1.1rem;
   cursor: pointer;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 4px;
+
+  white-space: nowrap;
+
+  padding: 0px 24px;
+
+  transition: 0.1s ease;
+}
+
+.callToActionButton:hover {
+  filter: invert(100);
+  border-color: var(--primaryColor);
+}
+
+.callToActionButtonIcon {
+  transition: 0.25s ease;
+}
+
+.callToActionButton:hover .callToActionButtonIcon {
+  transform: translateX(8px) scale(1.25);
 }
 
 .callToActionImage {
@@ -370,10 +391,13 @@
   position: relative;
   width: 100%;
   height: auto;
-  padding: 64px 128px;
+  padding: 128px;
+  padding-bottom: 192px;
   background-color: var(--secondaryColor);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: left;
+
+  margin-bottom: 64px;
 }
