@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  
+   padding-top: var(--navbarHeight);
   background-color: var(--primaryColor);
 }
 

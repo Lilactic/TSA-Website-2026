@@ -217,8 +217,6 @@ function Home() {
               <Link className={styles.link} to="/resources" style={{textDecoration: "none"}}>
                 <button className={styles.callToActionButton}>Make a difference<ArrowRight size={24} strokeWidth={3} style={{marginLeft: "16px"}} className={styles.callToActionButtonIcon}/></button>
               </Link>
-              <h1 className={styles.callToActionText}>Building our Community.<br />Together.</h1>
-              <Link className={styles.link} to="/resources"><button className={styles.callToActionButton}>Make a difference<ArrowRight size={24} strokeWidth={2}/></button></Link>
             </div>
             <img src={wrench} alt="Wrench" className={styles.callToActionImage} />
           </section>

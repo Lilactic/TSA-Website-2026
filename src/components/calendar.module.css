@@ -1,14 +1,15 @@
 .calendar {
   position: relative;
-  height: 100%;
   width: 100%;
+  height: auto;
   padding: 64px 128px;
   background-color: var(--primaryColor);
 }
 
 .calendarContainer {
     width: 100%;
-    min-width: 400px;
+    aspect-ratio: 2/1.1;
+    background-color: red;
     margin: 0 auto;
     border: 2px solid var(--secondaryColor);
     border-radius: 16px;
@@ -54,8 +55,9 @@
     display: grid;
     grid-auto-flow: row;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 24px 80px 80px 80px 80px 80px 80px;
+    grid-template-rows: 24px repeat(6, 1fr);
     background-color: var(--primaryColor);
+    grid-auto-rows: auto;
 }
 
 .weekdays {

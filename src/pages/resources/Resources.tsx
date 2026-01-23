@@ -10,7 +10,6 @@ function Resources() {
   return (
     <>
         <Navbar />
-        
         <main className={styles.main}>
           <section className={styles.hero}>
             <div 
@@ -220,7 +219,6 @@ function Resources() {
           </section>
 
         </main>
-
         <Footer />
     </>
   )
