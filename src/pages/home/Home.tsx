@@ -15,6 +15,7 @@ import shepherdsNook from '../../assets/images/shepherdsNook.png';
 import wrench from '../../assets/images/wrench.png'
 import styles from './Home.module.css'
 import { ArrowRight, ArrowUpRight } from 'lucide-react'
+import { Link } from 'react-router-dom';
 
 function Home() {
   return (
@@ -154,48 +155,50 @@ function Home() {
 
           <section className={styles.events}>
             <div className={styles.eventsContainer}>
-              <div className={styles.calendarContainer}>
-                < MiniCalendar />
-              </div>
-              <div className={styles.upcomingEventsContainer}>
-                <h2 className={styles.eventsHeader}>Upcoming Events</h2>
-                <div className={styles.eventCardGrid}>
-                  <div className={styles.eventCard}>
-                    <div className={styles.dateContainer}>
-                      <h3 className={styles.eventMonth}>Jan</h3>
-                      <h3 className={styles.eventDay}>18</h3>
-                    </div>
-                    <div className={styles.eventDescContainer}>
-                      <h3 className={styles.eventCardHeader}>Annual Tree Giveaway</h3>
-                      <p className={styles.eventCardDesc}> This is a cool totally fun event where you get a free tree to see if you can breed some trees to keep your garden weed free! </p>
-                    </div>
-                  </div>
-
-                  <div className={styles.eventCard}>
-                    <div className={styles.dateContainer}>
-                      <h3 className={styles.eventMonth}>Jan</h3>
-                      <h3 className={styles.eventDay}>18</h3>
-                    </div>
-                    <div className={styles.eventDescContainer}>
-                      <h3 className={styles.eventCardHeader}>Annual Tree Giveaway</h3>
-                      <p className={styles.eventCardDesc}> This is a cool totally fun event where you get a free tree to see if you can breed some trees to keep your garden weed free! </p>
-                    </div>
-                  </div>
-
-                  <div className={styles.eventCard}>
-                    <div className={styles.dateContainer}>
-                      <h3 className={styles.eventMonth}>Jan</h3>
-                      <h3 className={styles.eventDay}>18</h3>
-                    </div>
-                    <div className={styles.eventDescContainer}>
-                      <h3 className={styles.eventCardHeader}>Annual Tree Giveaway</h3>
-                      <p className={styles.eventCardDesc}> This is a cool totally fun event where you get a free tree to see if you can breed some trees to keep your garden weed free! </p>
-                    </div>
-                  </div>
+              <h2 className={styles.eventsHeader}>Upcoming Events</h2>
+              <div className={styles.eventsContentContainer}>
+                <div className={styles.calendarContainer}>
+                  < MiniCalendar />
                 </div>
-                
-                <div className={styles.eventButtonContainer}>
-                  <button className={styles.eventsButton}>View all upcoming events <ArrowRight size={16} strokeWidth={2}/></button>
+                <div className={styles.upcomingEventsContainer}>
+                  <div className={styles.eventCardGrid}>
+                    <div className={styles.eventCard}>
+                      <div className={styles.dateContainer}>
+                        <h3 className={styles.eventMonth}>Jan</h3>
+                        <h3 className={styles.eventDay}>18</h3>
+                      </div>
+                      <div className={styles.eventDescContainer}>
+                        <h3 className={styles.eventCardHeader}>Annual Tree Giveaway</h3>
+                        <p className={styles.eventCardDesc}> This is a cool totally fun event where you get a free tree to see if you can breed some trees to keep your garden weed free! </p>
+                      </div>
+                    </div>
+
+                    <div className={styles.eventCard}>
+                      <div className={styles.dateContainer}>
+                        <h3 className={styles.eventMonth}>Jan</h3>
+                        <h3 className={styles.eventDay}>18</h3>
+                      </div>
+                      <div className={styles.eventDescContainer}>
+                        <h3 className={styles.eventCardHeader}>Annual Tree Giveaway</h3>
+                        <p className={styles.eventCardDesc}> This is a cool totally fun event where you get a free tree to see if you can breed some trees to keep your garden weed free! </p>
+                      </div>
+                    </div>
+
+                    <div className={styles.eventCard}>
+                      <div className={styles.dateContainer}>
+                        <h3 className={styles.eventMonth}>Jan</h3>
+                        <h3 className={styles.eventDay}>18</h3>
+                      </div>
+                      <div className={styles.eventDescContainer}>
+                        <h3 className={styles.eventCardHeader}>Annual Tree Giveaway</h3>
+                        <p className={styles.eventCardDesc}> This is a cool totally fun event where you get a free tree to see if you can breed some trees to keep your garden weed free! </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className={styles.eventButtonContainer}>
+                    <Link className={styles.link} to="/events"><h3 className={styles.eventsButton}>View all upcoming events <ArrowRight size={16} strokeWidth={2}/></h3></Link>
+                  </div>
                 </div>
               </div>
             </div>
@@ -208,7 +211,7 @@ function Home() {
           <section className={styles.callToAction}>
             <div className={styles.callToActionContainer}>
               <h1 className={styles.callToActionText}>Building our Community.<br />Together.</h1>
-              <button className={styles.callToActionButton}>Make a difference<ArrowRight size={24} strokeWidth={2}/></button>
+              <Link className={styles.link} to="/resources"><button className={styles.callToActionButton}>Make a difference<ArrowRight size={24} strokeWidth={2}/></button></Link>
             </div>
             <img src={wrench} alt="Wrench" className={styles.callToActionImage} />
           </section>

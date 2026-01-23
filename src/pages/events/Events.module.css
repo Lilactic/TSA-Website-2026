@@ -1,19 +1,51 @@
 .main {
-  background-color: var(--primaryColor);
-  padding-top: var(--navbarHeight);
-
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   
+  background-color: var(--primaryColor);
 }
 
 .hero {
   width: 100%;
-  height: calc(100vh - var(--navbarHeight));
+  height: calc(50vh - var(--navbarHeight));
+  top: 0;
+
+  position: relative;
 
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.heroBG {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.content {
+  width: auto;
+  height: auto;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-size: 5em;
+  font-family: Bradford LL;
+
+  font-weight: 450;
+  letter-spacing: -0.04em;
 }
