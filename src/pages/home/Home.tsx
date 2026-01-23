@@ -42,7 +42,7 @@ function Home() {
             <div className={styles.importantInfo}>
               <div className={styles.phoneBox}>
                 <Phone size={16} strokeWidth={2} fill='true'/>
-                <h3 className='interDescription'>For life-threatning or serious emergencies, call 911</h3>
+                <h3 className='interDescription'>For life-threatening or serious emergencies, call 911</h3>
               </div>
               <h3 style={{maxWidth: "600px", marginTop: "16px", textAlign: "center"}} className='interDescription'>Note: This site is a demo. Resource information is for example purposes and may not be current or complete. Always confirm details directly with the organizations listed.</h3>
             </div>
@@ -173,39 +173,40 @@ function Home() {
                 <div className={styles.calendarContainer}>
                   < MiniCalendar />
                 </div>
+
                 <div className={styles.upcomingEventsContainer}>
                   <div className={styles.eventCardGrid}>
                     <div className={styles.eventCard}>
                       <div className={styles.dateContainer}>
-                        <h3 className={styles.eventMonth}>Jan</h3>
-                        <h3 className={styles.eventDay}>18</h3>
+                        <h3 className={styles.eventMonth}>Feb</h3>
+                        <h3 className={styles.eventDay}>21</h3>
                       </div>
                       <div className={styles.eventDescContainer}>
-                        <h3 className={styles.eventCardHeader}>Annual Tree Giveaway</h3>
-                        <p className={styles.eventCardDesc}> This is a cool totally fun event where you get a free tree to see if you can breed some trees to keep your garden weed free! </p>
+                        <h3 className={styles.eventCardHeader}>Daddy Daughter Dance</h3>
+                        <p className={styles.eventCardDesc}> This special evening includes dinner, dessert, dancing, and lots of boogying—all wrapped up in a night to remember. </p>
                       </div>
                     </div>
+                  </div>
 
-                    <div className={styles.eventCard}>
-                      <div className={styles.dateContainer}>
-                        <h3 className={styles.eventMonth}>Jan</h3>
-                        <h3 className={styles.eventDay}>18</h3>
-                      </div>
-                      <div className={styles.eventDescContainer}>
-                        <h3 className={styles.eventCardHeader}>Annual Tree Giveaway</h3>
-                        <p className={styles.eventCardDesc}> This is a cool totally fun event where you get a free tree to see if you can breed some trees to keep your garden weed free! </p>
-                      </div>
+                  <div className={styles.eventCard}>
+                    <div className={styles.dateContainer}>
+                      <h3 className={styles.eventMonth}>Mar</h3>
+                      <h3 className={styles.eventDay}>9</h3>
                     </div>
+                    <div className={styles.eventDescContainer}>
+                      <h3 className={styles.eventCardHeader}>Friendswood Fish Camp</h3>
+                      <p className={styles.eventCardDesc}> Children and their families will be introduced to the basics of fishing, all while catching fish throughout! </p>
+                    </div>
+                  </div>
 
-                    <div className={styles.eventCard}>
-                      <div className={styles.dateContainer}>
-                        <h3 className={styles.eventMonth}>Jan</h3>
-                        <h3 className={styles.eventDay}>18</h3>
-                      </div>
-                      <div className={styles.eventDescContainer}>
-                        <h3 className={styles.eventCardHeader}>Annual Tree Giveaway</h3>
-                        <p className={styles.eventCardDesc}> This is a cool totally fun event where you get a free tree to see if you can breed some trees to keep your garden weed free! </p>
-                      </div>
+                  <div className={styles.eventCard}>
+                    <div className={styles.dateContainer}>
+                      <h3 className={styles.eventMonth}>Apr</h3>
+                      <h3 className={styles.eventDay}>11</h3>
+                    </div>
+                    <div className={styles.eventDescContainer}>
+                      <h3 className={styles.eventCardHeader}>Spring Sparkle</h3>
+                      <p className={styles.eventCardDesc}> Join Keep Friendswood Beautiful on April 11, 2026, for the semi-annual community-wide cleanup! </p>
                     </div>
                   </div>
                   

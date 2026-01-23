@@ -1,9 +1,9 @@
 .calendarContainer {
     height: 100%;
-    border: 2px solid var(--secondaryColor);
     border-radius: 16px;
     overflow: hidden;
     box-shadow: var(--shadow-elevation-medium);
+    background-color: var(--elementColor);
 }
 
 .header {
