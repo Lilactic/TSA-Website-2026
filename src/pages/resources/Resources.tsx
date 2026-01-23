@@ -3,20 +3,13 @@ import Navbar from '../../components/navbar'
 import SearchBar from '../../components/searchBar'
 import '../../global.css'
 import styles from './Resources.module.css'
-
-import heroBG from '../../assets/images/heroBG2.png'
 import stevensonPark from '../../assets/images/stevensonPark.webp'
-import foodBank from '../../assets/images/foodbank.webp'
-
-import { CarFront, CircleParking, FerrisWheel, LocateFixed, MapPin, Trees, WavesLadder } from 'lucide-react'
 import ResourcesSearchItem from '../../components/resourcesSearchItem'
 
 function Resources() {
   return (
     <>
-      <body>
         <Navbar />
-        
         <main className={styles.main}>
           <section className={styles.hero}>
             <div 
@@ -226,9 +219,7 @@ function Resources() {
           </section>
 
         </main>
-
         <Footer />
-      </body>
     </>
   )
 }

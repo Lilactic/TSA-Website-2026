@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import '../global.css'
 import styles from './footer.module.css'
-import { TentTree } from 'lucide-react';
 
 import insta from '../assets/images/socials/instagram.webp'
 import facebook from '../assets/images/socials/facebook.webp'

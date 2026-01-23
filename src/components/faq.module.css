@@ -20,7 +20,7 @@
 .faqCell {
   display: grid;
   grid-template-rows: 50px 0fr;
-  transition: grid-template-rows 0.3s ease-in-out;
+  transition: grid-template-rows 0.2s ease-in-out;
   width: 100%;
   border-top: 4px solid var(--secondaryColor);
   padding: 16px 16px;

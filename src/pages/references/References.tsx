@@ -6,14 +6,12 @@ import styles from './References.module.css'
 function References() {
   return (
     <>
-      <body>
         <Navbar />
         
         <main className={styles.main}>
         </main>
 
         <Footer />
-      </body>
     </>
   )
 }

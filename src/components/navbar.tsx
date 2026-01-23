@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import '../global.css'
 import styles from './navbar.module.css'
-import { TentTree, TreeDeciduous } from 'lucide-react';
+import { TentTree } from 'lucide-react';
 import { useState } from 'react';
 
 function Navbar() {
