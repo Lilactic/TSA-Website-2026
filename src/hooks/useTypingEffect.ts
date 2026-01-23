@@ -10,9 +10,9 @@ const useTypingEffect = (paused: boolean = false) => {
     "assistance...",
     "family fun...",
   ];
-  const typingSpeed = 170;
+  const typingSpeed = 90;
   const deletingSpeed = 50;
-  const pauseBetweenTexts = 1150;
+  const pauseBetweenTexts = 1500;
 
   const [textIndex, setTextIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState("");

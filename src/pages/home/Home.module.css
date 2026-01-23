@@ -152,8 +152,7 @@ background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox=
   height: 365px;
   width: 31%;
   border-radius: 8px;
-  border: 2px solid var(--secondaryColor);
-  background-color: var(--primaryColor);
+  background-color: var(--elementColor);
   box-shadow: var(--shadow-elevation-medium);
   padding: 16px;
   display: flex;
@@ -188,6 +187,7 @@ background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox=
 
 .cardButton {
   border: 2px solid var(--secondaryColor);
+  background-color: var(--elementColor);
   cursor: pointer;
   height: 50px;
   width: 55px;
@@ -276,10 +276,9 @@ background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox=
   display: flex;
   flex-direction: row;
   padding: 16px 0px;
-  background-color: var(--primaryColor);
-  border: 2px solid var(--secondaryColor);
-  height: min-content;
-  box-shadow: var(--shadow-elevation-medium);
+  background-color: var(--elementColor);
+  height: 96px;
+  box-shadow: var(--shadow-elevation-medium-low);
 }
 
 .dateContainer {
@@ -287,7 +286,8 @@ background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox=
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 96px;
+  width: 80px;
+  height: 100%;
 }
 
 .eventMonth {
@@ -304,6 +304,7 @@ background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox=
 }
 
 .eventDescContainer {
+  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 8px;
