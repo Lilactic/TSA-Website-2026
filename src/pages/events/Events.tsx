@@ -12,9 +12,7 @@ function Events() {
       
       <main className={styles.main}>
         <section className={styles.hero}>
-            <img 
-              src={heroBG} 
-              alt="Background Image"
+            <div 
               className={styles.heroBG}
             />
 
