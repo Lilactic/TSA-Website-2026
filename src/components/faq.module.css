@@ -3,7 +3,7 @@
   font-weight: 450;
   font-size: 3rem;
   letter-spacing: -0.02em;
-  margin-bottom: 64px;
+  margin-bottom: 32px;
 }
 
 .faqGrid {
@@ -13,6 +13,8 @@
   grid-auto-flow: column;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(5, minmax(80px, auto));
+
+  margin-bottom: 32px;
 }
 
 .faqCell {

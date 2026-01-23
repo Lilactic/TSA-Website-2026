@@ -15,7 +15,7 @@ import shepherdsNook from '../../assets/images/shepherdsNook.png';
 import wrench from '../../assets/images/wrench.png'
 import styles from './Home.module.css'
 import { ArrowRight, ArrowUpRight } from 'lucide-react'
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
 function Home() {
   return (
@@ -24,9 +24,9 @@ function Home() {
         
         <main className={styles.main}>
           <section className={styles.hero}>
-            <img 
-              src={heroBG} 
-              alt="Background Image"
+            <div 
+              /*src={heroBG} 
+              alt="Background Image"*/
               className={styles.heroBG}
             />
 
@@ -204,6 +204,10 @@ function Home() {
             </div>
           </section>
 
+          <section className={styles.bentoBoard}>
+            <BentoBoard />
+          </section>
+
           <section className={styles.faq}>
             <FAQ />
           </section>
@@ -211,13 +215,9 @@ function Home() {
           <section className={styles.callToAction}>
             <div className={styles.callToActionContainer}>
               <h1 className={styles.callToActionText}>Building our Community.<br />Together.</h1>
-              <Link className={styles.link} to="/resources"><button className={styles.callToActionButton}>Make a difference<ArrowRight size={24} strokeWidth={2}/></button></Link>
+              <button className={styles.callToActionButton}>Make a difference<ArrowRight size={24} strokeWidth={2}/></button>
             </div>
             <img src={wrench} alt="Wrench" className={styles.callToActionImage} />
-          </section>
-
-          <section className={styles.bentoBoard}>
-            <BentoBoard />
           </section>
         </main>
         <Footer />

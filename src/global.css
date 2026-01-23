@@ -29,6 +29,11 @@
         11.3px 22.6px 34.7px -0.6px hsl(var(--shadow-color) / 0.35),
         16.1px 32.3px 49.5px -0.7px hsl(var(--shadow-color) / 0.4),
         22.8px 45.5px 69.9px -0.8px hsl(var(--shadow-color) / 0.45);
+
+    --shadow-elevation-medium-bottom-inset:
+        inset 0 6px 6px -6px hsl(var(--shadow-color) / 0.35),
+        inset 0 12px 12px -12px hsl(var(--shadow-color) / 0.2);
+
 }
 
 /* Affects ONLY the body tag */
@@ -70,6 +75,12 @@ body {
 
     font-weight: 450;
     letter-spacing: 0.02em;
+}
+
+.interTitle {
+    font-family: 'inter', sans-serif;
+    font-weight: 400;
+    font-size: 3rem;
 }
 
 .interHeader {
