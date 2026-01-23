@@ -13,10 +13,12 @@ import pool from '../../assets/images/pool.png';
 import shepherdsNook from '../../assets/images/shepherdsNook.png';
 import wrench from '../../assets/images/wrench.png'
 import styles from './Home.module.css'
-import { ArrowRight, ArrowUpRight } from 'lucide-react'
-import { Link } from 'react-router-dom';
+import { ArrowRight, ArrowUpRight, Phone, PhoneCall } from 'lucide-react'
+import { Link, useNavigate } from 'react-router-dom';
 
 function Home() {
+  const navigate = useNavigate();
+  
   return (
     <>
         <Navbar />
@@ -32,9 +34,21 @@ function Home() {
             <div className={styles.content}>
               <h1 className={styles.title}>F<span className={styles.titleKerning}>r</span>iend<span className={styles.titleKerning2}>s</span>wood, TX</h1>
               <h2 className={`interSubtitle ${styles.subtitle}`}>Community Resource Hub</h2>
-              < SearchBar />
+              <SearchBar  initialQuery={""} 
+                onSearch={(q) => navigate(`/resources?q=${encodeURIComponent(q)}`)}
+                onChange={() => {}}/>
             </div>
+
+            <div className={styles.importantInfo}>
+              <div className={styles.phoneBox}>
+                <Phone size={16} strokeWidth={2} fill='true'/>
+                <h3 className='interDescription'>For life-threatning or serious emergencies, call 911</h3>
+              </div>
+              <h3 style={{maxWidth: "600px", marginTop: "16px", textAlign: "center"}} className='interDescription'>Note: This site is a demo. Resource information is for example purposes and may not be current or complete. Always confirm details directly with the organizations listed.</h3>
+            </div>
+            
           </section>
+
           
           <section className={styles.description}>
             <img 
