@@ -18,8 +18,99 @@
 }
 
 .leftMenuContainer {
-    flex: 0.4;
-    background-color: #EBEBEB;
+  flex: 0.4;
+  width: 100%;
+  padding: 32px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--secondaryColor);
+  gap: 48px;
+}
+
+.leftHeaderText {
+  font-family: 'inter', sans-serif;
+  font-weight: 650;
+  font-size: 2rem;
+  color: var(--elementColor);
+}
+
+.leftHeaderWeekday {
+  font-family: 'inter', sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--elementColor);
+}
+
+.leftEventsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.leftSubheaderText {
+  font-family: 'inter', sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--accentColor);
+}
+
+.event {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border-radius: 4px;
+  border-left: 4px solid var(--accentColor);
+  padding: 8px;
+  margin-bottom: 4px;
+}
+
+.eventTitle {
+  font-family: 'inter', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--elementColor);
+}
+
+.eventTime {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  font-family: 'inter', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--elementColor);
+  margin-bottom: -2px;
+}
+
+.eventTimeSpan {
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.eventLocation {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  align-items: center;
+  font-family: 'inter', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--elementColor);
+  transition: color 0.2s ease;
+}
+
+.eventAddress {
+  text-decoration: underline;
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.eventLocation:hover {
+  color: var(--accentColor);
+  transition: color 0.2s ease;
 }
 
 .rightCalendarContainer {
@@ -27,7 +118,6 @@
     width: 100%;
     padding: 32px;
     overflow: hidden;
-    border-left: 1.5px solid #D3D3D3;
     display: flex;
     flex-direction: column;
     gap: 32px;
@@ -72,47 +162,86 @@
 
 .body {
     aspect-ratio: 1/0.7;
+    width: 100%;
     display: grid;
-    grid-auto-flow: row;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 24px repeat(6, 1fr);
-    grid-auto-rows: auto;
-    border: 1.5px solid #D3D3D3;
 }
 
-.weekdays {
-    font-family: 'inter', sans-serif;
-    font-weight: 450;
-    font-size: 1rem;
-    font-weight: 500;
-    text-align: center;
-    padding: 3px 0;
+.weekdaysShort {
+  font-family: 'inter', sans-serif;
+  font-weight: 450;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  padding: 3px 0;
 }
 
 .days {
-    font-family: 'inter', sans-serif;
-    font-weight: 400;
-    font-size: 1rem;
-    padding-left: 2px;
-    padding-top: 2px;
-    border-right: 1.5px solid #D3D3D3;
-    border-top: 1.5px solid #D3D3D3;
+  font-family: 'inter', sans-serif;
+  font-weight: 400;
+  font-size: 0.9rem;
+  padding: 4px;
+  border-right: 1.5px solid #D3D3D3;
+  border-top: 1.5px solid #D3D3D3;
+  background-color: none;
+  transition: background-color 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.days:hover {
+  background-color: #D3D3D3;
+  transition: background-color 0.2s ease;
 }
 
 .days:nth-child(7n) {
-  border-right: none;
+  border-right: 1.5px solid #D3D3D3;
+}
+
+.days:nth-child(7n+1) {
+  border-left: 1.5px solid #D3D3D3;
+}
+
+.days:nth-child(n+43) {
+  border-bottom: 1.5px solid #D3D3D3;
 }
 
 .dayNum {
-    display: flex;
-    width: 32px;
-    padding: 6px;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  width: 32px;
+  padding: 6px;
+  justify-content: center;
+  align-items: center;
+  cursor: default;
+  border-radius: 16px;
+  background-color: none;
+  transition: background-color 0.1s ease;
 }
 
 .dayNum.today {
-    background-color: var(--accentColor);
-    border-radius: 24px;
-    color: var(--textColor);
+  background-color: var(--accentColor);
+  transition: background-color 0.1s ease;
+  border-radius: 24px;
+  color: var(--textColor);
+}
+
+.eventBadge {
+  display: flex;
+  width: 100%;
+  height: 20px;
+  justify-content: center;
+  align-items: center;
+  cursor: default;
+  border-radius: 4px;
+  background-color: #D3D3D3;
+  color: #5E5E5E;
+  font-family: 'inter', sans-serif;
+  font-weight: 400;
+  font-size: 0.8rem;
+  overflow: hidden;
+  text-wrap: nowrap;
+  box-sizing: border-box; 
 }

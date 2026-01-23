@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from './calendar.module.css';
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, MapPin, Clock } from "lucide-react";
+import eventsList from './eventsItem';
 
 const months = [
   "January", "February", "March", "April", "May", "June",
@@ -16,6 +17,12 @@ const Calendar: React.FC = () => {
   const [currentDate, setCurrentDate] = useState(new Date(today.getFullYear(), today.getMonth(), today.getDate()));
   const [currentMonth, currentYear] = [currentDate.getMonth(), currentDate.getFullYear()];
   const [selectedDate, setSelectedDate] = useState(today);
+
+  const toDateKey = (date: Date) => date.toISOString().split("T")[0];
+
+  const dateKey = toDateKey(selectedDate);
+  const selectedEvents = eventsList[dateKey] || [];
+
 
   const getDaysInMonth = (month: number, year: number) => {
     return new Date(year, month + 1, 0).getDate(); // gets the date of the last day of the month; 0th day of the next month is last day of curr month
@@ -59,17 +66,29 @@ const Calendar: React.FC = () => {
     <section className={styles.calendar}>
       <div className={styles.calendarContainer}>
         <div className={styles.leftMenuContainer}>
-          <div className={styles.leftHeader}>
-            <h2 className={styles.leftHeaderText}>{weekdays[selectedDate.getDay()]} {months[selectedDate.getMonth()]} {selectedDate.getDate()}, {selectedDate.getFullYear()}</h2>
-            <div className={styles.headerButtonContainer}>
-              <button className={styles.headerButton} onClick={prevMonth}><ChevronLeft size={24} strokeWidth={4}/></button>
-              <button className={styles.headerButton} onClick={nextMonth}><ChevronRight size={24} strokeWidth={4}/></button>
-            </div>
+          <h2 className={styles.leftHeaderText}><span className={styles.leftHeaderWeekday}>{weekdays[selectedDate.getDay()]}</span><br />{months[selectedDate.getMonth()]} {selectedDate.getDate()}</h2>
+          <div className={styles.leftEventsContainer}>
+            <h3 className={styles.leftSubheaderText}>Upcoming Events</h3>
+            {selectedEvents.length === 0 && (
+              <p className={styles.eventTitle}>No events for this day</p>
+            )}
+            {selectedEvents.map((event, index) => (
+              <div key={index} className={styles.event}>
+                <h4 className={styles.eventTitle}>{event.title}</h4>
+                <p className={styles.eventTime}><Clock size={16} strokeWidth={2}/><span className={styles.eventTimeSpan}>{event.time}</span></p>
+
+                {event.mapUrl && (
+                  <a className={styles.eventLocation} href={event.mapUrl} target="_blank" rel="noreferrer">
+                    <MapPin size={24} strokeWidth={2}/><span className={styles.eventAddress}> {event.address}</span>
+                  </a>
+                )}
+              </div>
+            ))}
           </div>
         </div>
         <div className={styles.rightCalendarContainer}>
           <div className={styles.rightHeader}>
-            <h2 className={styles.rightHeaderText}><span className={styles.headerMonth}>{months[currentMonth]}</span> {currentYear}</h2>
+            <h2 className={styles.rightHeaderText}><span className={styles.rightHeaderMonth}>{months[currentMonth]}</span> {currentYear}</h2>
             <div className={styles.rightHeaderButtonContainer}>
               <button className={styles.rightHeaderButton} onClick={prevMonth}><ChevronLeft size={24} strokeWidth={4}/></button>
               <button className={styles.rightHeaderButton} onClick={nextMonth}><ChevronRight size={24} strokeWidth={4}/></button>
@@ -80,19 +99,30 @@ const Calendar: React.FC = () => {
             <div key={day} className={styles.weekdaysShort}>{day}</div>
             ))}
 
-            {days.map((dayNum, index) => (
-            <div
-                key={index}
-                className={styles.days}
-                onClick={() => setSelectedDate(prev => {
-                  if(dayNum !== null)
-                    return new Date(currentYear, currentMonth, dayNum);
-                  return prev;
-                })}
-            >
-                <div className={`${styles.dayNum} ${dayNum === selectedDate.getDate() && currentMonth === selectedDate.getMonth() && currentYear === selectedDate.getFullYear() ? styles.today : ""}`}>{dayNum}</div>
-            </div>
-            ))}
+            {days.map((dayNum, index) => {
+              if (dayNum === null) {
+                // Empty cells for the first/last week
+                return <div key={index} className={styles.days}></div>;
+              }
+
+              const dateKey = toDateKey(new Date(currentYear, currentMonth, dayNum));
+              const numEvents = eventsList[dateKey]?.length || 0;
+              const isSelected = dayNum === selectedDate.getDate() && currentMonth === selectedDate.getMonth() && currentYear === selectedDate.getFullYear();
+
+              return (
+                <div
+                  key={index}
+                  className={styles.days}
+                  onClick={() =>
+                    setSelectedDate(new Date(currentYear, currentMonth, dayNum))
+                  }
+                >
+                  <div className={`${styles.dayNum} ${isSelected ? styles.today : ""}`}>{dayNum}</div>
+
+                  {numEvents > 0 && (<div className={styles.eventBadge}>{numEvents} event(s)</div>)}
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
