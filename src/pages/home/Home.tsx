@@ -13,7 +13,7 @@ import pool from '../../assets/images/pool.png';
 import shepherdsNook from '../../assets/images/shepherdsNook.png';
 import wrench from '../../assets/images/wrench.png'
 import styles from './Home.module.css'
-import { ArrowRight, ArrowUpRight } from 'lucide-react'
+import { ArrowRight, ArrowUpRight, Phone, PhoneCall } from 'lucide-react'
 import { Link } from 'react-router-dom';
 
 function Home() {
@@ -34,7 +34,17 @@ function Home() {
               <h2 className={`interSubtitle ${styles.subtitle}`}>Community Resource Hub</h2>
               < SearchBar />
             </div>
+
+            <div className={styles.importantInfo}>
+              <div className={styles.phoneBox}>
+                <Phone size={16} strokeWidth={2} fill='true'/>
+                <h3 className='interDescription'>For life-threatning or serious emergencies, call 911</h3>
+              </div>
+              <h3 style={{maxWidth: "600px", marginTop: "16px"}} className='interDescription'>Note: This site is a demo. Resource information is for example purposes and may not be current or complete. Always confirm details directly with the organizations listed.</h3>
+            </div>
+            
           </section>
+
           
           <section className={styles.description}>
             <img 
