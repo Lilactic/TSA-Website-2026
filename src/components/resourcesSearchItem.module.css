@@ -92,9 +92,11 @@
 }
 
 .cardTopic {
+  position: relative;
 
   height: 28px;
-  width: 36px;
+  width: auto;
+  padding: 0px 8px;
   
   background-color: var(--accentColor);
   box-shadow: var(--shadow-elevation-low);
@@ -110,6 +112,38 @@
   transition: 0.1s;
 }
 
-.cardTopic:hover {
-  scale: 1.05;
+.tagText {
+  overflow: hidden;
+  max-width: 0;
+  opacity: 0;
+  transition: max-width 0.2s ease, opacity 0.15s ease, padding 0.2s ease;
+  white-space: nowrap;
+
+  padding-left: 0px;
+
+  font-family: 'inter', sans-serif;
+  font-weight: 500;
+  font-size: 0.9rem;
+  line-height: 1.2rem;
+}
+
+.cardTopic .hitbox {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 0;
+
+  height: 28px;
+  width: 38px;
+
+  z-index: 20;
+
+  background-color: transparent
+}
+
+.hitbox:hover + .tagText {
+  max-width: 200px;
+  opacity: 1;
+
+  padding-left: 6px;
 }
