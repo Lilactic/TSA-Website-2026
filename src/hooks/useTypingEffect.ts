@@ -2,15 +2,17 @@ import { useState, useEffect } from "react";
 
 const useTypingEffect = (paused: boolean = false) => {
   const texts = [
-    "community resources",
-    "volunteer opportunities",
-    "upcoming events",
-    "amenities",
-    "support services",
+    "community resources...",
+    "volunteer opportunities...",
+    "upcoming events...",
+    "amenities...",
+    "support services...",
+    "assistance...",
+    "family fun...",
   ];
-  const typingSpeed = 70;
+  const typingSpeed = 170;
   const deletingSpeed = 50;
-  const pauseBetweenTexts = 1500;
+  const pauseBetweenTexts = 1150;
 
   const [textIndex, setTextIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState("");
