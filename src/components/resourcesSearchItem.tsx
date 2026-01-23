@@ -1,8 +1,7 @@
-import { MapPin, Trees, LocateFixed, CarFront, WavesLadder, FerrisWheel, TargetIcon, Hospital, PawPrint, Croissant, Accessibility, Volleyball, Sun, Shirt, Baby, Backpack, CircleDollarSign, GraduationCap, Pill, Laptop, CalendarDays } from "lucide-react";
+import { MapPin, Trees, LocateFixed, WavesLadder, Hospital, PawPrint, Croissant, Accessibility, Volleyball, Sun, Shirt, Baby, Backpack, CircleDollarSign, GraduationCap, Pill, Laptop, CalendarDays } from "lucide-react";
 
 import '../global.css'
 import styles from './resourcesSearchItem.module.css'
-import { Link } from "react-router-dom";
 import type { JSX } from "react";
 
 interface ResourcesSearchItemProps {

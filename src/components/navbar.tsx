@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { forwardRef, useState } from "react";
 import { TentTree } from "lucide-react";
-
 import "../global.css";
 import styles from "./navbar.module.css";
 
