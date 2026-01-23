@@ -55,10 +55,20 @@
   letter-spacing: -0.04em;
 }
 
+.searchHeaderBox {
+  position: sticky;
+  top: var(--navbarHeight);
+
+  z-index: 49;
+
+  height: 112px;
+  width: 100%;
+}
+
 .searchHeader {
   position: sticky;
   top: var(--navbarHeight);
-  height: 80px;
+  height: auto;
   width: 100%;
 
   display: flex;
@@ -69,10 +79,9 @@
 
   z-index: 50;
 
-  padding: 16px 128px;
+  transition: 0.2s ease;
 
-  margin-bottom: 16px;
-  margin-top: 16px;
+  padding: 32px 128px;
 }
 
 .searchBox {
@@ -101,4 +110,10 @@
 
   height: 100%;
   width: 100%;
+}
+
+.stacked {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  box-shadow: var(--shadow-elevation-medium);
 }
