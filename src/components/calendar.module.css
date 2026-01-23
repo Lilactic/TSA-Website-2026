@@ -7,27 +7,47 @@
 }
 
 .calendarContainer {
+    display: flex;
+    flex-direction: row;
     width: 100%;
     margin: 0 auto;
-    border: 2px solid var(--secondaryColor);
     border-radius: 16px;
     overflow: hidden;
     box-shadow: var(--shadow-elevation-medium);
+    background-color: #FFFFFF;
 }
 
-.header {
+.leftMenuContainer {
+    flex: 0.4;
+    background-color: #EBEBEB;
+}
+
+.rightCalendarContainer {
+    flex: 1;
+    width: 100%;
+    padding: 32px;
+    overflow: hidden;
+    border-left: 1.5px solid #D3D3D3;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.rightHeader {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    padding: 16px;
     font-size: 1.25rem;
-    background-color: var(--accentColor);
-    height: 50px;
-    border-bottom: 2px solid var(--secondaryColor);
 }
 
-.headerButton {
+.rightHeaderButtonContainer {
+    display: flex;
+    flex-direction: row;
+    width: 64px;
+}
+
+.rightHeaderButton {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,27 +56,28 @@
     font-size: 1.5rem;
     cursor: pointer;
     padding: 4px;
-    margin: 0 16px;
     color: var(--textColor);
 }
 
-.headerText {
+.rightHeaderText {
     font-family: 'inter', sans-serif;
-    font-weight: 500;
+    font-weight: 450;
     font-size: 1.5rem;
     color: var(--textColor);
-    width: 190px;
-    text-align: center;
+}
+
+.rightHeaderMonth {
+    font-weight: 650;
 }
 
 .body {
-    aspect-ratio: 2/1.1;
+    aspect-ratio: 1/0.7;
     display: grid;
     grid-auto-flow: row;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 24px repeat(6, 1fr);
-    background-color: var(--primaryColor);
     grid-auto-rows: auto;
+    border: 1.5px solid #D3D3D3;
 }
 
 .weekdays {
@@ -74,8 +95,8 @@
     font-size: 1rem;
     padding-left: 2px;
     padding-top: 2px;
-    border-right: 1.5px solid var(--secondaryColor);
-    border-top: 1.5px solid var(--secondaryColor);
+    border-right: 1.5px solid #D3D3D3;
+    border-top: 1.5px solid #D3D3D3;
 }
 
 .days:nth-child(7n) {
