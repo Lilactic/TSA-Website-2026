@@ -7,6 +7,7 @@ import ResourcesSearchItem from '../../components/resourcesSearchItem'
 import { useEffect, useRef, useState } from 'react'
 import { resources } from '../../data/resources'
 import { useSearchParams } from "react-router-dom";
+import { Filter } from 'lucide-react'
 
 
 
@@ -95,6 +96,9 @@ function Resources() {
               setSearchQuery(query);
             }}/>
           </div>
+          <button className={styles.filterButton}>
+            <Filter size={30} strokeWidth={2} />
+          </button>
         </div>
 
         </section>

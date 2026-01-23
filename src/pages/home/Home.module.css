@@ -194,6 +194,13 @@ background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox=
   display: flex;
   justify-content: center;
   align-items: center;
+
+  transform: 0.1s ease;
+}
+
+.cardButton:hover {
+  filter: invert(100);
+  border: 2px solid var(--primaryColor);
 }
 
 .cardTagGrid {
@@ -201,7 +208,7 @@ background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox=
   margin-top: 24px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -216,6 +223,7 @@ background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox=
   border: 2px solid var(--secondaryColor);
   text-align: center;
   justify-content: center;
+  margin-right: 12px;
 }
 
 .events {
