@@ -13,7 +13,7 @@ import pool from '../../assets/images/pool.png';
 import shepherdsNook from '../../assets/images/shepherdsNook.png';
 import wrench from '../../assets/images/wrench.png'
 import styles from './Home.module.css'
-import { ArrowRight, ArrowUpRight, Phone, PhoneCall } from 'lucide-react'
+import { ArrowRight, ArrowUpRight, Phone } from 'lucide-react'
 import { Link, useNavigate } from 'react-router-dom';
 
 function Home() {
