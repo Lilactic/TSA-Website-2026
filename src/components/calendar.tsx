@@ -7,13 +7,15 @@ const months = [
   "July", "August", "September", "October", "November", "December"
 ];
 
-const weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+const weekdaysShort = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
 const Calendar: React.FC = () => {
   const today = new Date();
 
-  const [date, setDate] = useState({ month: today.getMonth(), year: today.getFullYear() }); //gets the date (month & year), and setDate function
-  const [currentMonth, currentYear] = [date.month, date.year]; //gets the month and year from date object
+  const [currentDate, setCurrentDate] = useState(new Date(today.getFullYear(), today.getMonth(), today.getDate()));
+  const [currentMonth, currentYear] = [currentDate.getMonth(), currentDate.getFullYear()];
+  const [selectedDate, setSelectedDate] = useState(today);
 
   const getDaysInMonth = (month: number, year: number) => {
     return new Date(year, month + 1, 0).getDate(); // gets the date of the last day of the month; 0th day of the next month is last day of curr month
@@ -22,20 +24,24 @@ const Calendar: React.FC = () => {
   const firstDayOfMonth = new Date(currentYear, currentMonth, 1).getDay(); //gets the first day (0-6) of curr month
 
   const prevMonth = () => {
-    setDate(({month, year}) => {
+    setCurrentDate(prev => {
+      const year = prev.getFullYear();
+      const month = prev.getMonth();
       if (month === 0) {
-        return {month: 11, year: year - 1};
+        return new Date(year-1, 11, 1);
       }
-      return {month: month-1, year: year};
+      return new Date(year, month-1, 1);
     });
   };
 
   const nextMonth = () => {
-    setDate(({month, year}) => {
-      if (month === 11) {
-        return {month: 0, year: year + 1};
+    setCurrentDate(prev => {
+      const year = prev.getFullYear();
+      const month = prev.getMonth();
+      if (month === 12) {
+        return new Date(year+1, 1, 1);
       }
-      return {month: month+1, year: year};
+      return new Date(year, month+1, 1);
     });
   };
 
@@ -52,24 +58,42 @@ const Calendar: React.FC = () => {
   return (
     <section className={styles.calendar}>
       <div className={styles.calendarContainer}>
-        <div className={styles.header}>
-          <button className={styles.headerButton} onClick={prevMonth}><ChevronLeft size={24} strokeWidth={4}/></button>
-          <h2 className={styles.headerText}>{months[currentMonth]} {currentYear}</h2>
-          <button className={styles.headerButton} onClick={nextMonth}><ChevronRight size={24} strokeWidth={4}/></button>
-        </div>
-        <div className={styles.body}>
-          {weekdays.map((day) => (
-          <div key={day} className={styles.weekdays}>{day}</div>
-          ))}
-
-          {days.map((day, index) => (
-          <div
-              key={index}
-              className={styles.days}
-          >
-              <div className={`${styles.dayNum} ${day === today.getDate() && currentMonth === today.getMonth() && currentYear === today.getFullYear() ? styles.today : ""}`}>{day}</div>
+        <div className={styles.leftMenuContainer}>
+          <div className={styles.leftHeader}>
+            <h2 className={styles.leftHeaderText}>{weekdays[selectedDate.getDay()]} {months[selectedDate.getMonth()]} {selectedDate.getDate()}, {selectedDate.getFullYear()}</h2>
+            <div className={styles.headerButtonContainer}>
+              <button className={styles.headerButton} onClick={prevMonth}><ChevronLeft size={24} strokeWidth={4}/></button>
+              <button className={styles.headerButton} onClick={nextMonth}><ChevronRight size={24} strokeWidth={4}/></button>
+            </div>
           </div>
-          ))}
+        </div>
+        <div className={styles.rightCalendarContainer}>
+          <div className={styles.rightHeader}>
+            <h2 className={styles.rightHeaderText}><span className={styles.headerMonth}>{months[currentMonth]}</span> {currentYear}</h2>
+            <div className={styles.rightHeaderButtonContainer}>
+              <button className={styles.rightHeaderButton} onClick={prevMonth}><ChevronLeft size={24} strokeWidth={4}/></button>
+              <button className={styles.rightHeaderButton} onClick={nextMonth}><ChevronRight size={24} strokeWidth={4}/></button>
+            </div>
+          </div>
+          <div className={styles.body}>
+            {weekdaysShort.map((day) => (
+            <div key={day} className={styles.weekdaysShort}>{day}</div>
+            ))}
+
+            {days.map((dayNum, index) => (
+            <div
+                key={index}
+                className={styles.days}
+                onClick={() => setSelectedDate(prev => {
+                  if(dayNum !== null)
+                    return new Date(currentYear, currentMonth, dayNum);
+                  return prev;
+                })}
+            >
+                <div className={`${styles.dayNum} ${dayNum === selectedDate.getDate() && currentMonth === selectedDate.getMonth() && currentYear === selectedDate.getFullYear() ? styles.today : ""}`}>{dayNum}</div>
+            </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

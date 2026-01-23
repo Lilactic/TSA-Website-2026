@@ -1,18 +1,19 @@
 .searchBar {
   height: 48px;
   width: 100%;
-  border: 4px solid var(--secondaryColor);
   border-radius: 16px;
   cursor: pointer;
   display: flex;
   align-items: center;
+  box-shadow: var(--shadow-elevation-medium-low);
+  background-color: var(--elementColor);
 }
 
 .searchInput {
     font-family: 'inter', sans-serif;
     font-weight: 400;
     font-size: 1rem;
-    padding: 0 8px;
+    padding: 0 16px;
     color: #616161;
     border: none;
     outline: none;
@@ -23,16 +24,11 @@
 }
 
 .searchButton {
-  height:40px;
-  width: 44px;
-  padding: 4px 4px;
-  border-left: 4px solid var(--secondaryColor);
-  border-top: none;
-  border-bottom: none;
-  border-right: none;
-  border-top-right-radius: 11px;
-  border-bottom-right-radius: 11px;
-  background-color: var(--accentColor);
+  padding: 0px 16px;
+  border: none;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+  background-color: var(--elementColor);
   color: var(--textColor);
   display: flex;
   justify-content: center;
