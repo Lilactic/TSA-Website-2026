@@ -6,7 +6,6 @@ import FAQ from '../../components/faq'
 import BentoBoard from '../../components/bentoBoard'
 import '../../global.css'
 import foodBank from '../../assets/images/foodbank.webp'
-import heroBG from '../../assets/images/heroBG2.png'
 import foodBankExt from '../../assets/images/foodbankExt.webp'
 import library from '../../assets/images/library.png';
 import stevensonPark from '../../assets/images/stevensonPark.webp';
@@ -15,7 +14,7 @@ import shepherdsNook from '../../assets/images/shepherdsNook.png';
 import wrench from '../../assets/images/wrench.png'
 import styles from './Home.module.css'
 import { ArrowRight, ArrowUpRight } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 function Home() {
   return (
@@ -214,8 +213,12 @@ function Home() {
 
           <section className={styles.callToAction}>
             <div className={styles.callToActionContainer}>
+              <h1 className='interTitle'>Building our Community.<br />Together.</h1>
+              <Link className={styles.link} to="/resources" style={{textDecoration: "none"}}>
+                <button className={styles.callToActionButton}>Make a difference<ArrowRight size={24} strokeWidth={3} style={{marginLeft: "16px"}} className={styles.callToActionButtonIcon}/></button>
+              </Link>
               <h1 className={styles.callToActionText}>Building our Community.<br />Together.</h1>
-              <button className={styles.callToActionButton}>Make a difference<ArrowRight size={24} strokeWidth={2}/></button>
+              <Link className={styles.link} to="/resources"><button className={styles.callToActionButton}>Make a difference<ArrowRight size={24} strokeWidth={2}/></button></Link>
             </div>
             <img src={wrench} alt="Wrench" className={styles.callToActionImage} />
           </section>
