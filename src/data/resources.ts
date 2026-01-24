@@ -1,5 +1,8 @@
-import type { Filters } from "../types/Resources";
-import stevensonPark from '../assets/images/stevensonPark.webp'
+import type { Filters } from "../types/Resources"
+import stevensonPark from '../assets/images/stevensonPark.jpg'
+import library from '../assets/images/library.png'
+import pitties1 from '../assets/images/pitties1.jpg'
+import cyber2 from '../assets/images/cyber2.png'
 
 export interface Resource {
   id: string;
@@ -16,7 +19,7 @@ export const resources: Resource[] = [
     title: "Friendswood Library",
     description: "The Friendswood community library, media, and event center.",
     mapUrl: "https://www.friendswood.lib.tx.us/about-us/",
-    imageUrl: stevensonPark,
+    imageUrl: library,
     topics: ["local", "children", "education", "computer", "events"],
   },
   {
@@ -166,7 +169,7 @@ export const resources: Resource[] = [
     title: "Plus3ForCyberSafety",
     description: "Equipping communities to combat cyberbullying.",
     mapUrl: "https://plus3forcybersafety.org/",
-    imageUrl: stevensonPark,
+    imageUrl: cyber2,
     topics: ["children", "education", "computer"],
   },
   {
@@ -184,7 +187,7 @@ export const resources: Resource[] = [
     description:
       "Committed to rescuing dogs and cats in need.",
     mapUrl: "https://www.threelittlepittiesrescue.org/",
-    imageUrl: stevensonPark,
+    imageUrl: pitties1,
     topics: ["local", "pets"],
   },
   {

@@ -8,7 +8,7 @@ import '../../global.css'
 import foodBank from '../../assets/images/foodbank.webp'
 import foodBankExt from '../../assets/images/foodbankExt.webp'
 import library from '../../assets/images/library.png';
-import stevensonPark from '../../assets/images/stevensonPark.webp';
+import stevensonPark from '../../assets/images/stevensonPark.jpg';
 import pool from '../../assets/images/pool.png';
 import shepherdsNook from '../../assets/images/shepherdsNook.png';
 import wrench from '../../assets/images/wrench.png'
