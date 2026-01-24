@@ -12,45 +12,117 @@
   width: 100%;
   height: auto;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: 200px 200px 200px;
   gap: 16px;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 200px);
+  grid-template-areas:
+  "a a b c c"
+  "d e b f g"
+  "d h i i j";
 }
 
-.bentoSmall {
-  position: relative;
+@media (max-width: 400px) {
+  .bentoBoardContainer {
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(10, 120px);
+  grid-template-areas:
+  "a"
+  "b"
+  "c"
+  "d"
+  "e"
+  "f"
+  "g"
+  "h"
+  "i"
+  "j";
+}
+}
+
+@media (min-width: 400px) and (max-width: 700px) {
+  .bentoBoardContainer {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(7, 160px);
+  grid-template-areas:
+  "a a"
+  "b c"
+  "e d"
+  "f d"
+  "f g"
+  "h i"
+  "j j";
+}
+}
+
+@media (min-width: 600px) and (max-width: 800px) {
+  .bentoBoardContainer {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 160px);
+  grid-template-areas:
+  "d d a"
+  "h e a"
+  "i b b"
+  "i f c"
+  "j g c";
+}
+}
+
+@media (min-width: 800px) and (max-width: 1200px) {
+  .bentoBoardContainer {
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 160px);
+  grid-template-areas:
+  "a a f b"
+  "d e e b"
+  "d c i i"
+  "j c g h";
+}
+}
+
+.bentoCard {
   border-radius: 8px;
   overflow: hidden;
-  grid-column: span 1;
-  grid-row: span 1;
   cursor: pointer;
-
-  transform-origin: center center; /* 👈 key */
-  transition:
-    transform 0.6s ease-in-out,
-    opacity 0.4s ease-in-out;
 }
 
-.bentoLarge {
-  position: relative;
-  border-radius: 8px;
-  overflow: hidden;
-  grid-column: span 2;
-  grid-row: span 1;
-  cursor: pointer;
-  background-color: none;
-
-  transform-origin: center center; /* 👈 key */
-  transition:
-    transform 0.6s ease-in-out,
-    opacity 0.4s ease-in-out,
-    background-color 0.3s ease;
+.bentoCard.a {
+  grid-area: a;
+  width: 100%;
+  height: 100%;
 }
+.bentoCard.b {
+  grid-area: b;
+}
+.bentoCard.c {
+  grid-area: c;
+}
+.bentoCard.d {
+  grid-area: d;
+}
+.bentoCard.e {
+  grid-area: e;
+}
+.bentoCard.f {
+  grid-area: f;
+}
+.bentoCard.g {
+  grid-area: g;
+}
+.bentoCard.h{
+  grid-area: h;
+}
+.bentoCard.i {
+  grid-area: i;
+}
+.bentoCard.j {
+  grid-area: j;
+}
+
 
 .bentoImage {
-  height: 100%;
-  width: 100%;
   object-fit: cover;
+  width: 100%;
+  height: 100%;
   filter: grayscale(100%);
   transform: scale(1);
   transition: filter 0.5s ease-in-out, transform 0.5s ease;
