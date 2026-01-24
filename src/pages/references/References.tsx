@@ -3,6 +3,7 @@ import Navbar from '../../components/navbar'
 import '../../global.css'
 import styles from './References.module.css'
 import copyrightChecklist from '../../assets/documents/copyrightChecklist.pdf'
+import workLog from '../../assets/documents/workLog.pdf'
 
 function References() {
   return (
@@ -25,7 +26,7 @@ function References() {
               <div className={styles.pdfSubcontainer}>
                 <h1 className={styles.subtitle}>Work Log</h1>
                 <div className={styles.pdfViewerContainer}>
-                  <iframe className={styles.pdfViewer} src={copyrightChecklist} width="100%" height="500px" title="Student Copyright Checklist">
+                  <iframe className={styles.pdfViewer} src={workLog} width="100%" height="500px" title="Student Copyright Checklist">
                     <p>Your browser does not support iframes. You can download the PDF
                       <a href={copyrightChecklist}>here</a>.
                     </p>
