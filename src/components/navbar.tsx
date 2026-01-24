@@ -81,10 +81,10 @@ const Navbar = forwardRef<HTMLDivElement, NavbarProps>(
             transform: `translateX(${mobileNavOpen ? "0%" : "-200%"})`,
           }}
         >
-          <Link className={styles.mobileLink} to="/resources">Resources</Link>
-          <Link className={styles.mobileLink} to="/events">Events</Link>
-          <Link className={styles.mobileLink} to="/references">References</Link>
-          <Link className={styles.mobileLink} to="/contact-us">Contact Us</Link>
+          <Link className={styles.mobileLink} to="/resources"><h3 className={`interSubtitle ${styles.navigationLink}`}>Resources</h3></Link>
+          <Link className={styles.mobileLink} to="/events"><h3 className={`interSubtitle ${styles.navigationLink}`}>Events</h3></Link>
+          <Link className={styles.mobileLink} to="/references"><h3 className={`interSubtitle ${styles.navigationLink}`}>References</h3></Link>
+          <Link className={styles.mobileLink} to="/contact-us"><h3 className={`interSubtitle ${styles.navigationLink}`}>Contact Us</h3></Link>
         </div>
       </>
     );

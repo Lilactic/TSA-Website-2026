@@ -33,7 +33,7 @@ const faqData: FAQCell[] = [
     ),
   },
   {
-    question: "How can I stay up to date with events happening in Friendswood?",
+    question: "How can I stay up to date with events in Friendswood?",
     answer: (
       <>
         Check out the events calendar on this website or visit the official Friendswood{" "}

@@ -112,6 +112,8 @@ header {
     height: 40%;
     aspect-ratio: 1;
 
+    background: transparent;
+
     outline: none;
     border: none;
 

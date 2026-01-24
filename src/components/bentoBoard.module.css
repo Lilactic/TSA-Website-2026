@@ -1,5 +1,6 @@
 .bentoBoardTitle {
-  font-family: Bradford LL;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
   font-weight: 450;
   letter-spacing: -0.02em;
   font-size: 3rem;
