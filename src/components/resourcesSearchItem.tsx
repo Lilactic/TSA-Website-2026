@@ -1,8 +1,7 @@
-import { MapPin, Trees, LocateFixed, WavesLadder, Hospital, PawPrint, Croissant, Accessibility, Volleyball, Sun, Shirt, Baby, Backpack, CircleDollarSign, GraduationCap, Pill, Laptop, CalendarDays } from "lucide-react";
+import { MapPin } from "lucide-react";
 
 import '../global.css'
 import styles from './resourcesSearchItem.module.css'
-import type { JSX } from "react";
 import type { Filters } from "../types/Resources";
 import { filterData } from "../config/filters";
 

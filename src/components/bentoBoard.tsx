@@ -11,38 +11,35 @@ return (
 <>
 <h1 className={styles.bentoBoardTitle}>Gallery</h1>
     <div className={styles.bentoBoardContainer}>
-        <div className={styles.bentoLarge}>
-        <img src={library} alt="Friendswood Library" className={styles.bentoImage}/>
+        <div className={`${styles.bentoCard} ${styles.a}`}>
+            <img src={library} alt="Friendswood Library" className={styles.bentoImage}/>
         </div>
-        <div className={styles.bentoSmall}>
-        <img src={stevensonPark} alt="Stevenson Park" className={styles.bentoImage}/>
+        <div className={`${styles.bentoCard} ${styles.b}`}>
+            <img src={library} alt="Friendswood Library" className={styles.bentoImage}/>
         </div>
-        <div className={styles.bentoLarge}>
-        <img src={pool} alt="Friendswood City Pool" className={styles.bentoImage}/>
+        <div className={`${styles.bentoCard} ${styles.c}`}>
+            <img src={library} alt="Friendswood Library" className={styles.bentoImage}/>
         </div>
-        <div className={styles.bentoSmall}>
-        <img src={shepherdsNook} alt="Shepherd's Nook" className={styles.bentoImage}/>
+        <div className={`${styles.bentoCard} ${styles.d}`}>
+            <img src={library} alt="Friendswood Library" className={styles.bentoImage}/>
         </div>
-        <div className={styles.bentoSmall}>
-        <img src={foodBankExt} alt="Houston Food Bank Exterior" className={styles.bentoImage}/>
-        </div> 
-        <div className={styles.bentoLarge}>
-        <img src={library} alt="Friendswood Library" className={styles.bentoImage}/>
+        <div className={`${styles.bentoCard} ${styles.e}`}>
+            <img src={library} alt="Friendswood Library" className={styles.bentoImage}/>
         </div>
-        <div className={styles.bentoSmall}>
-        <img src={stevensonPark} alt="Stevenson Park" className={styles.bentoImage}/>
+        <div className={`${styles.bentoCard} ${styles.f}`}>
+            <img src={library} alt="Friendswood Library" className={styles.bentoImage}/>
         </div>
-        <div className={styles.bentoSmall}>
-        <img src={foodBankExt} alt="Houston Food Bank Exterior" className={styles.bentoImage}/>
+        <div className={`${styles.bentoCard} ${styles.g}`}>
+            <img src={library} alt="Friendswood Library" className={styles.bentoImage}/>
         </div>
-        <div className={styles.bentoLarge}>
-        <img src={stevensonPark} alt="Stevenson Park" className={styles.bentoImage}/>
+        <div className={`${styles.bentoCard} ${styles.h}`}>
+            <img src={library} alt="Friendswood Library" className={styles.bentoImage}/>
         </div>
-        <div className={styles.bentoSmall}>
-        <img src={pool} alt="Friendswood City Pool" className={styles.bentoImage}/>
+        <div className={`${styles.bentoCard} ${styles.i}`}>
+            <img src={library} alt="Friendswood Library" className={styles.bentoImage}/>
         </div>
-        <div className={styles.bentoSmall}>
-        <img src={foodBankExt} alt="Houston Food Bank Exterior" className={styles.bentoImage}/>
+        <div className={`${styles.bentoCard} ${styles.j}`}>
+            <img src={library} alt="Friendswood Library" className={styles.bentoImage}/>
         </div>
     </div>
 </>
