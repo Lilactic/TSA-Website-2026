@@ -48,7 +48,8 @@
 
 .title {
   font-size: 5em;
-  font-family: Bradford LL;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
 
   font-weight: 450;
   letter-spacing: -0.04em;

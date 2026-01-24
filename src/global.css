@@ -60,21 +60,6 @@ body {
     padding: 0;
 }
 
-@font-face {
-    font-display: swap;
-    font-family: Bradford LL;
-    font-weight: 450;
-    src: url(assets/fonts/BradfordLLWeb-Regular.woff2) format("woff2")
-}
-
-@font-face {
-    font-display: swap;
-    font-family: Bradford LL;
-    font-style: italic;
-    font-weight: 450;
-    src: url(assets/fonts/BradfordLLWeb-Italic.woff2) format("woff2")
-}
-
 .interSubtitle {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
@@ -111,7 +96,8 @@ body {
 }
 
 .bradfordHeader {
-    font-family: Bradford LL;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
     font-weight: 450;
     letter-spacing: -0.02em;
 
