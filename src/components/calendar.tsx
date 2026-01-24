@@ -119,7 +119,7 @@ const Calendar: React.FC = () => {
                 >
                   <div className={`${styles.dayNum} ${isSelected ? styles.today : ""}`}>{dayNum}</div>
 
-                  {numEvents > 0 && (<div className={styles.eventBadge}><p>{numEvents} event(s)</p></div>)}
+                  {numEvents > 0 && (<div className={styles.eventBadge}><p className={styles.eventBadgeText}>{numEvents} event(s)</p></div>)}
                 </div>
               );
             })}

@@ -1,3 +1,4 @@
+@media (min-width: 900px) {
 .calendar {
   position: relative;
   width: 100%;
@@ -190,6 +191,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  min-width: 0;
 }
 
 .days:hover {
@@ -244,4 +246,525 @@
   overflow: hidden;
   text-wrap: nowrap;
   box-sizing: border-box; 
+}
+
+.eventBadgeText {
+  text-wrap: nowrap;
+  overflow: hidden;
+}
+}
+
+@media (min-width: 550px) and (max-width: 900px) {
+  .calendar {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 64px 64px;
+  background-color: var(--primaryColor);
+}
+
+.calendarContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow-elevation-medium);
+    background-color: #FFFFFF;
+}
+
+.leftMenuContainer {
+  flex: 0.4;
+  width: 100%;
+  padding: 32px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  background-color: var(--secondaryColor);
+  gap: 48px;
+}
+
+.leftHeaderText {
+  font-family: 'inter', sans-serif;
+  font-weight: 650;
+  font-size: 2rem;
+  color: var(--elementColor);
+}
+
+.leftHeaderWeekday {
+  font-family: 'inter', sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--elementColor);
+}
+
+.leftEventsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow: hidden;
+}
+
+.leftSubheaderText {
+  font-family: 'inter', sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--accentColor);
+}
+
+.event {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border-radius: 4px;
+  border-left: 4px solid var(--accentColor);
+  padding: 8px;
+  margin-bottom: 4px;
+}
+
+.eventTitle {
+  font-family: 'inter', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--elementColor);
+}
+
+.eventTime {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  font-family: 'inter', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--elementColor);
+  margin-bottom: -2px;
+}
+
+.eventTimeSpan {
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.eventLocation {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  align-items: center;
+  font-family: 'inter', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--elementColor);
+  transition: color 0.2s ease;
+}
+
+.eventAddress {
+  text-decoration: underline;
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.eventLocation:hover {
+  color: var(--accentColor);
+  transition: color 0.2s ease;
+}
+
+.rightCalendarContainer {
+    flex: 1;
+    width: 100%;
+    padding: 32px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.rightHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.25rem;
+}
+
+.rightHeaderButtonContainer {
+    display: flex;
+    flex-direction: row;
+    width: 64px;
+}
+
+.rightHeaderButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 4px;
+    color: var(--textColor);
+}
+
+.rightHeaderText {
+    font-family: 'inter', sans-serif;
+    font-weight: 450;
+    font-size: 1.5rem;
+    color: var(--textColor);
+}
+
+.rightHeaderMonth {
+    font-weight: 650;
+}
+
+.body {
+    aspect-ratio: 1/0.7;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 24px repeat(6, 1fr);
+}
+
+.weekdaysShort {
+  font-family: 'inter', sans-serif;
+  font-weight: 450;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  padding: 3px 0;
+}
+
+.days {
+  font-family: 'inter', sans-serif;
+  font-weight: 400;
+  font-size: 0.9rem;
+  padding: 4px;
+  border-right: 1.5px solid #D3D3D3;
+  border-top: 1.5px solid #D3D3D3;
+  background-color: none;
+  transition: background-color 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 0;
+}
+
+.days:hover {
+  background-color: #D3D3D3;
+  transition: background-color 0.2s ease;
+}
+
+.days:nth-child(7n) {
+  border-right: 1.5px solid #D3D3D3;
+}
+
+.days:nth-child(7n+1) {
+  border-left: 1.5px solid #D3D3D3;
+}
+
+.days:nth-child(n+43) {
+  border-bottom: 1.5px solid #D3D3D3;
+}
+
+.dayNum {
+  display: flex;
+  width: 32px;
+  padding: 6px;
+  justify-content: center;
+  align-items: center;
+  cursor: default;
+  border-radius: 16px;
+  background-color: none;
+  transition: background-color 0.1s ease;
+}
+
+.dayNum.today {
+  background-color: var(--accentColor);
+  transition: background-color 0.1s ease;
+  border-radius: 24px;
+  color: var(--textColor);
+}
+
+.eventBadge {
+  display: flex;
+  width: 100%;   
+  height: 20px;
+  justify-content: center;
+  align-items: center;
+  cursor: default;
+  border-radius: 4px;
+  background-color: #D3D3D3;
+  color: #5E5E5E;
+  font-family: 'inter', sans-serif;
+  font-weight: 400;
+  font-size: 0.8rem;
+  overflow: hidden;
+  text-wrap: nowrap;
+  box-sizing: border-box; 
+}
+
+.eventBadgeText {
+  text-wrap: nowrap;
+  overflow: hidden;
+}
+}
+
+@media (max-width: 550px) {
+  .calendar {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 64px 64px;
+  background-color: var(--primaryColor);
+}
+
+.calendarContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 32px;
+}
+
+.leftMenuContainer {
+  flex: 0.4;
+  width: 100%;
+  padding: 32px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--secondaryColor);
+  gap: 48px;
+  box-shadow: var(--shadow-elevation-medium);
+  border-radius: 16px;
+}
+
+.leftHeaderText {
+  font-family: 'inter', sans-serif;
+  font-weight: 650;
+  font-size: 2rem;
+  color: var(--elementColor);
+}
+
+.leftHeaderWeekday {
+  font-family: 'inter', sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--elementColor);
+}
+
+.leftEventsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow: hidden;
+}
+
+.leftSubheaderText {
+  font-family: 'inter', sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--accentColor);
+}
+
+.event {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border-radius: 4px;
+  border-left: 4px solid var(--accentColor);
+  padding: 8px;
+  margin-bottom: 4px;
+}
+
+.eventTitle {
+  font-family: 'inter', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--elementColor);
+}
+
+.eventTime {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  font-family: 'inter', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--elementColor);
+  margin-bottom: -2px;
+}
+
+.eventTimeSpan {
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.eventLocation {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  align-items: center;
+  font-family: 'inter', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--elementColor);
+  transition: color 0.2s ease;
+}
+
+.eventAddress {
+  text-decoration: underline;
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.eventLocation:hover {
+  color: var(--accentColor);
+  transition: color 0.2s ease;
+}
+
+.rightCalendarContainer {
+    flex: 1;
+    width: 100%;
+    padding: 32px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    box-shadow: var(--shadow-elevation-medium);
+  border-radius: 16px;
+}
+
+.rightHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.25rem;
+}
+
+.rightHeaderButtonContainer {
+    display: flex;
+    flex-direction: row;
+    width: 64px;
+}
+
+.rightHeaderButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 4px;
+    color: var(--textColor);
+}
+
+.rightHeaderText {
+    font-family: 'inter', sans-serif;
+    font-weight: 450;
+    font-size: 1.5rem;
+    color: var(--textColor);
+}
+
+.rightHeaderMonth {
+    font-weight: 650;
+}
+
+.body {
+    aspect-ratio: 1/0.7;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 24px repeat(6, 1fr);
+}
+
+.weekdaysShort {
+  font-family: 'inter', sans-serif;
+  font-weight: 400;
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-align: center;
+  padding: 3px 0;
+}
+
+.days {
+  font-family: 'inter', sans-serif;
+  font-weight: 400;
+  font-size: 0.7rem;
+  padding: 4px;
+  border-right: 1.5px solid #D3D3D3;
+  border-top: 1.5px solid #D3D3D3;
+  background-color: none;
+  transition: background-color 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 0;
+}
+
+.days:hover {
+  background-color: #D3D3D3;
+  transition: background-color 0.2s ease;
+}
+
+.days:nth-child(7n) {
+  border-right: 1.5px solid #D3D3D3;
+}
+
+.days:nth-child(7n+1) {
+  border-left: 1.5px solid #D3D3D3;
+}
+
+.days:nth-child(n+43) {
+  border-bottom: 1.5px solid #D3D3D3;
+}
+
+.dayNum {
+  display: flex;
+  width: 20px;
+  padding: 4px;
+  justify-content: center;
+  align-items: center;
+  cursor: default;
+  border-radius: 24px;
+  background-color: none;
+  transition: background-color 0.1s ease;
+}
+
+.dayNum.today {
+  background-color: var(--accentColor);
+  transition: background-color 0.1s ease;
+  border-radius: 24px;
+  color: var(--textColor);
+}
+
+.eventBadge {
+  display: flex;
+  width: 100%;   
+  height: 15px;
+  justify-content: center;
+  align-items: center;
+  cursor: default;
+  border-radius: 4px;
+  background-color: #D3D3D3;
+  color: #5E5E5E;
+  font-family: 'inter', sans-serif;
+  font-weight: 400;
+  font-size: 0.6rem;
+  overflow: hidden;
+  text-wrap: nowrap;
+  box-sizing: border-box; 
+}
+
+.eventBadgeText {
+  text-wrap: nowrap;
+  overflow: hidden;
+}
 }
