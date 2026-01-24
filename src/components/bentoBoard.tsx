@@ -1,10 +1,6 @@
 import React from 'react';
 import styles from './bentoBoard.module.css';
-import foodBankExt from '../assets/images/foodbankExt.webp';
 import library from '../assets/images/library.png';
-import stevensonPark from '../assets/images/stevensonPark.webp';
-import pool from '../assets/images/pool.png';
-import shepherdsNook from '../assets/images/shepherdsNook.png';
 
 const bentoBoard: React.FC = () => {
 return (
