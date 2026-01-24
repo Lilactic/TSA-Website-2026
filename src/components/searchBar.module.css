@@ -6,7 +6,7 @@
   cursor: pointer;
   display: flex;
   align-items: center;
-  box-shadow: var(--shadow-elevation-medium-low);
+  border: 2px solid var(--secondaryColor);
   background-color: var(--elementColor);
 }
 
