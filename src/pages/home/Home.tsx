@@ -41,7 +41,7 @@ function Home() {
 
             <div className={styles.importantInfo}>
               <div className={styles.phoneBox}>
-                <Phone size={16} strokeWidth={2} fill='true'/>
+                <Phone size={16} strokeWidth={2} fill='true' style={{flexShrink: "0"}} className={styles.phoneBoxLogo}/>
                 <h3 className='interDescription'>For life-threatening or serious emergencies, call 911</h3>
               </div>
               <h3 style={{maxWidth: "600px", marginTop: "16px", textAlign: "center"}} className='interDescription'>Note: This site is a demo. Resource information is for example purposes and may not be current or complete. Always confirm details directly with the organizations listed.</h3>

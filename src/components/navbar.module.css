@@ -203,9 +203,15 @@ header {
     }
 }
 
-@media (max-width: 670px) {
+@media (max-width: 900px) {
     header {
         padding: 0px 64px;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 0px 32px;
     }
 }
 

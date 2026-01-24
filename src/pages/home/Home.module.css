@@ -85,8 +85,12 @@ background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox=
 
 .phoneBox {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
+
+  max-width: 500px;
+
+  text-align: center;
 }
 
 .phoneBox h3 {
@@ -454,7 +458,6 @@ background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox=
 
   .calendarContainer {
     height: 450px;
-    background-color: blue;
   }
 
   .upcomingEventsContainer {
@@ -551,10 +554,77 @@ background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox=
   .callToActionContainer {
     padding: 64px 32px;
   }
+
+  .importantInfo {
+    padding: 0px 32px;
+    bottom: 80px;
+  }
+
+  .description {
+    padding: 0px 32px 64px 32px;
+  }
+
+  .spotlight {
+    padding: 32px;
+  }
+
+  .events {
+    padding: 32px;
+  }
+
+  .bentoBoard {
+    padding: 128px 32px;
+    padding-bottom: 192px;
+
+    margin-bottom: 64px;
+  }
+
+  .faq {
+    position: relative;
+    width: 100%;
+    padding: 64px 32px;
+  }
+
+  .callToActionImage {
+    right: 128px;
+  }
+
+  .callToAction {
+    padding: 32px;
+  }
+
+  .eventCard {
+    height: 128px;
+  }
 }
 
 @media (max-width: 500px) {
   .descriptionText {
     font-size: 1.5rem;
+  }
+
+  .title {
+    font-size: 3em;
+  }
+
+  .projectGrid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+
+  .phoneBox {
+    position: relative;
+    max-width: 300px;
+
+    transform: translateX(16px);
+  }
+
+  .phoneBox h3 {
+    margin-left: 0px;
+  }
+
+  .phoneBoxLogo {
+    position: absolute;
+    left: 8px;
+    transform: scale(1.5);
   }
 }
