@@ -91,6 +91,8 @@
 }
 
 .filterButton {
+  position: relative;
+
   height: 48px;
   aspect-ratio: 1;
 
@@ -144,6 +146,95 @@
   box-shadow: var(--shadow-elevation-medium);
 }
 
+.popover {
+  position: absolute;
+
+  height: auto;
+  width: auto;
+
+  background-color: var(--primaryColor);
+  border: 2px solid var(--secondaryColor);
+  border-radius: 16px;
+  box-shadow: var(--shadow-elevation-medium);
+
+  top: calc(48px + 24px);
+  right: 0px;
+
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(6, 32px);
+  gap: 16px;
+
+  padding: 32px;
+
+  overflow: hidden;
+
+  transform-origin: top right;
+  transform: scale(0);   /* start collapsed */
+  opacity: 0;            /* start invisible */
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  pointer-events: none;  /* prevents clicks when hidden */
+}
+
+.popover.open {
+  transform: scale(1);   /* expand */
+  opacity: 1;            /* fade in */
+  pointer-events: auto;  /* allow clicks when visible */
+}
+
+.tagSelector {
+  height: 32px;
+  width: auto;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.checkbox {
+  height: 80%;
+  aspect-ratio: 1;
+
+  cursor: pointer;
+
+  border: 2px solid var(--secondaryColor);
+  outline: none;
+}
+
+.cardTopic {
+  position: relative;
+
+  height: 28px;
+  width: auto;
+  padding: 0px 8px;
+
+  margin-left: 8px;
+  
+  background-color: var(--accentColor);
+  box-shadow: var(--shadow-elevation-low);
+  
+  border-radius: 16px;
+  margin-right: 12px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: default;
+  transition: 0.1s;
+}
+
+.tagText {
+  overflow: hidden;
+  padding-left: 6px;
+  white-space: nowrap;
+  font-family: 'inter', sans-serif;
+  font-weight: 500;
+  font-size: 0.9rem;
+  line-height: 1.2rem;
+}
+
+
 @media (max-width: 900px) {
   .searchHeader {
     padding-left: 64px;
@@ -152,5 +243,70 @@
 
   .resourceList {
     padding: 0px 64px;
+  }
+
+  .popover {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(9, 32px);
+    gap: 16px;
+  }
+}
+
+@media (max-width: 800px) {
+  .title {
+    font-size: 3.4em;
+    line-height: 1em;
+    margin-bottom: 16px;
+  }
+
+  .subtitle {
+    font-size: 1em;
+  }
+
+  .content {
+    padding: 0px 32px;
+  }
+
+  .searchBox {
+    height: auto;
+    width: 50%;
+    flex-grow: 1;
+    margin-right: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .searchHeader {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .resourceList {
+    padding: 0px 32px;
+  }
+
+  .itemGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+
+  .popover {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+
+    overflow: hidden;
+
+    gap: 16px;
+    height: 300px;
+    overflow-y: scroll;
+  }
+}
+
+@media (max-width: 500px) {
+  .title {
+    font-size: 3em;
   }
 }
