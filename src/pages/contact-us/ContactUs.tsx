@@ -4,8 +4,11 @@ import '../../global.css'
 import styles from './ContactUs.module.css'
 import { Mail, Phone, MapPin, Send } from 'lucide-react'
 import image from "../../assets/images/library.png"
+import { useState } from 'react'
 
 function ContactUs() {
+  const [buttonText, setButtonText] = useState("Send Message");
+
   return (
     <>
       <Navbar />
@@ -55,9 +58,9 @@ function ContactUs() {
               <input type="text" placeholder="Your Name" />
               <input type="email" placeholder="Your Email" />
               <textarea placeholder="Your Message" rows={5} />
-              <button type="button">
+              <button type="button" onClick={() => {setButtonText("Message Sent!")}}>
                 <Send size={18} />
-                Send Message
+                {buttonText}
               </button>
             </form>
           </div>
