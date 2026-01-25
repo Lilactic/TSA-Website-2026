@@ -1,3 +1,9 @@
+.eventTextSpan {
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
 @media (min-width: 900px) {
 .calendar {
   position: relative;
@@ -47,6 +53,7 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+  overflow: hidden;
 }
 
 .leftSubheaderText {
@@ -82,12 +89,6 @@
   font-size: 1rem;
   color: var(--elementColor);
   margin-bottom: -2px;
-}
-
-.eventTimeSpan {
-  text-wrap: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
 }
 
 .eventLocation {
@@ -324,6 +325,9 @@
 }
 
 .eventTitle {
+  display: flex;
+  gap: 4px;
+  align-items: center;
   font-family: 'inter', sans-serif;
   font-weight: 400;
   font-size: 1rem;
@@ -339,12 +343,6 @@
   font-size: 1rem;
   color: var(--elementColor);
   margin-bottom: -2px;
-}
-
-.eventTimeSpan {
-  text-wrap: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
 }
 
 .eventLocation {
@@ -489,7 +487,7 @@
 
 .eventBadge {
   display: flex;
-  width: 100%;   
+  width: 100%;
   height: 20px;
   justify-content: center;
   align-items: center;
@@ -595,12 +593,6 @@
   font-size: 1rem;
   color: var(--elementColor);
   margin-bottom: -2px;
-}
-
-.eventTimeSpan {
-  text-wrap: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
 }
 
 .eventLocation {

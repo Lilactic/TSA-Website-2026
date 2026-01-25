@@ -21,7 +21,7 @@ function References() {
               <h2 className={`interSubtitle ${styles.subtitle}`}>Work log, copyright checklist, & sources.</h2>
             </div>
           </section>
-          <section className={styles.pdfs}>
+          <section className={styles.references}>
             <div className={styles.pdfsContainer}>
               <div className={styles.pdfSubcontainer}>
                 <h1 className={styles.subtitle}>Work Log</h1>
@@ -44,9 +44,7 @@ function References() {
                 </div>
               </div>
             </div>
-          </section>
 
-          <section className={styles.perms}>
             <div className={styles.permsContainer}>
               <h1 className={styles.subtitle}>Image Permissions</h1>
               <p className={styles.text}>All images displayed on this website are either in the public domain or used with explicit permission. Permission to use images of organizations and individuals has been granted by the respective organization or individual. Each organization was contacted via this email:</p>
@@ -78,13 +76,18 @@ function References() {
                   <br/><br/>Friendswood Public Library 
                 </p>
               </div>
-            </div>
-          </section>
 
-          <section className={styles.sources}>
+              <div className={styles.emailContainer}>
+                <p className={styles.quoteText}>
+                  We would be pleased for you to include a description and photo of The Shepherd's Nook in your project. I have attached our mission statement in addition to a description. I don't know that you would need it, but I thought it might be of interest to you. I will take an up-to-date photo today to send to you.
+                  <br/><br/>The Shepherd's Nook 
+                </p>
+              </div>
+            </div>
+  
             <div className={styles.sourcesContainer}>
               <h1 className={styles.subtitle}>Sources</h1>
-              <p className={styles.text}>https://unsplash.com/photos/people-playing-soccer-on-green-grass-field-during-daytime-vJDbPuxUS_s?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink</p>
+              <p className={styles.linkText}>https://unsplash.com/photos/people-playing-soccer-on-green-grass-field-during-daytime-vJDbPuxUS_s?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink</p>
             </div>
           </section>
         </main>

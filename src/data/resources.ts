@@ -3,6 +3,7 @@ import stevensonPark from '../assets/images/stevensonPark.jpg'
 import library from '../assets/images/library.png'
 import pitties1 from '../assets/images/pitties1.jpg'
 import cyber2 from '../assets/images/cyber2.png'
+import shepherdsNook from '../assets/images/shepherdsNook.jpg'
 
 export interface Resource {
   id: string;
@@ -57,6 +58,15 @@ export const resources: Resource[] = [
     mapUrl: "https://www.ci.friendswood.tx.us/481/Sportspark",
     imageUrl: stevensonPark,
     topics: ["local", "park", "sports", "children"],
+  },
+  {
+    id: "shepherds-nook",
+    title: "The Shepherd's Nook",
+    description:
+      "A Christian outreach ministry serving Friendswood and the surrounding communities.",
+    mapUrl: "https://www.gshepherd.net/outreach-ministries",
+    imageUrl: shepherdsNook,
+    topics: ["local", "religion", "children"],
   },
   {
     id: "lpj-hangar",

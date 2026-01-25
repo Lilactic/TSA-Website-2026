@@ -10,7 +10,7 @@ import foodBankExt from '../../assets/images/foodbankExt.webp'
 import library from '../../assets/images/library.png';
 import stevensonPark from '../../assets/images/stevensonPark.jpg';
 import pool from '../../assets/images/pool.png';
-import shepherdsNook from '../../assets/images/shepherdsNook.png';
+import shepherdsNook from '../../assets/images/shepherdsNook.jpg';
 import wrench from '../../assets/images/wrench.png'
 import styles from './Home.module.css'
 import { ArrowRight, ArrowUpRight, Phone } from 'lucide-react'
@@ -137,7 +137,7 @@ function Home() {
                   className={styles.cardImage}
                 />
                 <div className={styles.cardHeaderGrid}>
-                  <h2 className={styles.cardHeader}>Shepherd's Nook</h2>
+                  <h2 className={styles.cardHeader}>The Shepherd's Nook</h2>
                   <button className={styles.cardButton}><ArrowUpRight size={32} strokeWidth={2}/></button>
                 </div>
                 <div className={styles.cardTagGrid}>
