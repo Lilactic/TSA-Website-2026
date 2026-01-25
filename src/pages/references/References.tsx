@@ -46,8 +46,8 @@ function References() {
             </div>
 
             <div className={styles.sourcesContainer}>
-              <h1 className={styles.subtitle}>Libraries and Tools</h1>
-              <p className={styles.text}>This website was developed using the web development framework ReactJS, configured to use typescript and vanilla CSS. React Router is used for page routing, and Lucide React is used for icons. No pre-built themes or components were used in this website, and all images are used in accordance with TSA rules. The hero section background was generated using https://heropatterns.com/.</p>
+              <h1 className={styles.refSubtitle}>Libraries and Tools</h1>
+              <p className={styles.text}>This website was developed using the web development framework ReactJS, configured to use typescript and vanilla CSS. React Router is used for page routing, and Lucide React is used for icons. No pre-built themes or components were used in this website, and all images are used in accordance with TSA rules. The hero section background was generated using <span className={styles.linkText}>https://heropatterns.com/.</span></p>
             </div>
 
             <div className={styles.permsContainer}>
