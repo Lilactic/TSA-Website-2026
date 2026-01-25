@@ -45,6 +45,11 @@ function References() {
               </div>
             </div>
 
+            <div className={styles.sourcesContainer}>
+              <h1 className={styles.subtitle}>Libraries and Tools</h1>
+              <p className={styles.text}>This website was developed using the web development framework ReactJS, configured to use typescript and vanilla CSS. React Router is used for page routing, and Lucide React is used for icons. No pre-built themes or components were used in this website, and all images are used in accordance with TSA rules. The hero section background was generated using https://heropatterns.com/.</p>
+            </div>
+
             <div className={styles.permsContainer}>
               <h1 className={styles.subtitle}>Image Permissions</h1>
               <p className={styles.text}>All images displayed on this website are either in the public domain or used with explicit permission. Permission to use images of organizations and individuals has been granted by the respective organization or individual. Each organization was contacted via this email:</p>
