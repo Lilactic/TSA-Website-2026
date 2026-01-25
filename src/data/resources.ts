@@ -4,6 +4,25 @@ import library from '../assets/images/library.png'
 import pitties1 from '../assets/images/pitties1.jpg'
 import cyber2 from '../assets/images/cyber2.png'
 import shepherdsNook from '../assets/images/shepherdsNook.jpg'
+import park1 from '../assets/images/park1.jpg'
+import birthdayJoy from '../assets/images/birthdayJoy.jpg'
+import innovative from '../assets/images/innovativeAlternatives.webp'
+import anchorPoint from '../assets/images/anchorPoint.jpg'
+import dogPark from '../assets/images/dogPark.jpg'
+import hopeVillage from '../assets/images/hopeVillage.jpg'
+import lpjHangar from '../assets/images/lpjHangar.jpg'
+import memorialPark from '../assets/images/memorialPark.jpg'
+import treasureOfDreams from '../assets/images/treasureOfDreams.jpg'
+import agape from '../assets/images/agape.jpg'
+import atrium from '../assets/images/atrium.jpg'
+import BACODA from '../assets/images/BACODA.jpg'
+import galvestonFoodBank from '../assets/images/galvestonFoodBank.jpg'
+import inspira from '../assets/images/inspira.jpg'
+import maryQueen from '../assets/images/maryQueen.jpg'
+import cssSportsPark from '../assets/images/cssSportsPark.jpg'
+import renwick from '../assets/images/renwick.jpg'
+import WJC from '../assets/images/WJCPark.jpg'
+import forgottenAngels from '../assets/images/forgottenAngels.jpg'
 
 export interface Resource {
   id: string;
@@ -37,8 +56,8 @@ export const resources: Resource[] = [
     title: "Centennial Park",
     description:
       "A local park featuring trails, a basketball court, and many playing fields.",
-    mapUrl: "https://www.ci.friendswood.tx.us/261/Dog-Park",
-    imageUrl: stevensonPark,
+    mapUrl: "https://www.ci.friendswood.tx.us/480/Centennial-Park",
+    imageUrl: park1,
     topics: ["local", "park", "sports"],
   },
   {
@@ -46,8 +65,8 @@ export const resources: Resource[] = [
     title: "Friendswood Dog Park",
     description:
       "Friendswood's primary safe place for our canine friends to play.",
-    mapUrl: "https://www.ci.friendswood.tx.us/480/Centennial-Park",
-    imageUrl: stevensonPark,
+    mapUrl: "https://www.ci.friendswood.tx.us/261/Dog-Park",
+    imageUrl: dogPark,
     topics: ["local", "park", "pets"],
   },
   {
@@ -56,7 +75,7 @@ export const resources: Resource[] = [
     description:
       "Formally named the Corporal Steven Schulz Sportspark.",
     mapUrl: "https://www.ci.friendswood.tx.us/481/Sportspark",
-    imageUrl: stevensonPark,
+    imageUrl: cssSportsPark,
     topics: ["local", "park", "sports", "children"],
   },
   {
@@ -74,7 +93,7 @@ export const resources: Resource[] = [
     description:
       "Formally named the Leavesley Park Jones Hangar, an event center and playground.",
     mapUrl: "https://www.ci.friendswood.tx.us/526/Leavesley-Park-Jones-Hangar",
-    imageUrl: stevensonPark,
+    imageUrl: lpjHangar,
     topics: ["local", "events", "children"],
   },
   {
@@ -82,7 +101,7 @@ export const resources: Resource[] = [
     title: "Renwick Sports Complex",
     description: "19 acres of baseball and multi-purpose fields.",
     mapUrl: "https://www.ci.friendswood.tx.us/528/Renwick-Sports-Complex",
-    imageUrl: stevensonPark,
+    imageUrl: renwick,
     topics: ["local", "sports", "children"],
   },
   {
@@ -91,7 +110,7 @@ export const resources: Resource[] = [
     description:
       "Formally known as Lance Corporal Wesley J. Canning Park.",
     mapUrl: "https://www.ci.friendswood.tx.us/791/Lance-Corporal-Wesley-J-Canning-Park",
-    imageUrl: stevensonPark,
+    imageUrl: WJC,
     topics: ["local", "park"],
   },
   {
@@ -99,7 +118,7 @@ export const resources: Resource[] = [
     title: "1776 Memorial Park",
     description: "Features trails, ideal for wildlife viewing.",
     mapUrl: "https://www.ci.friendswood.tx.us/792/1776-Memorial-Park",
-    imageUrl: stevensonPark,
+    imageUrl: memorialPark,
     topics: ["local", "park"],
   },
   {
@@ -108,7 +127,7 @@ export const resources: Resource[] = [
     description:
       "Mary Queen Catholic Church's food distribution center.",
     mapUrl: "https://www.maryqueencatholicchurch.org/food-pantry",
-    imageUrl: stevensonPark,
+    imageUrl: maryQueen,
     topics: ["local", "food_support", "religion"],
   },
   {
@@ -117,7 +136,7 @@ export const resources: Resource[] = [
     description:
       "Provides easy access to nutritional food for the economically disadvantaged.",
     mapUrl: "https://www.galvestoncountyfoodbank.org/",
-    imageUrl: stevensonPark,
+    imageUrl: galvestonFoodBank,
     topics: ["local", "food_support"],
   },
   {
@@ -126,7 +145,7 @@ export const resources: Resource[] = [
     description:
       "A loving home for people with intellectual and cognitive disabilities.",
     mapUrl: "https://hope-village.com/",
-    imageUrl: stevensonPark,
+    imageUrl: hopeVillage,
     topics: ["local", "disability_care"],
   },
   {
@@ -135,7 +154,7 @@ export const resources: Resource[] = [
     description:
       "A Christ-centered non-profit transforming the lives of people living with disabilities.",
     mapUrl: "https://forgottenangels.org/",
-    imageUrl: stevensonPark,
+    imageUrl: forgottenAngels,
     topics: ["local", "disability_care", "religion"],
   },
   {
@@ -144,7 +163,7 @@ export const resources: Resource[] = [
     description:
       "Specialized, individualized care for those with intellectual and developmental disabilities.",
     mapUrl: "https://atreasureofdreams.org/",
-    imageUrl: stevensonPark,
+    imageUrl: treasureOfDreams,
     topics: ["local", "disability_care", "religion"],
   },
   {
@@ -153,7 +172,7 @@ export const resources: Resource[] = [
     description:
       "Assisting local families in need of food, clothing, toiletries, school supplies, and inspiration.",
     mapUrl: "https://www.agapecentric.org/",
-    imageUrl: stevensonPark,
+    imageUrl: agape,
     topics: ["local", "food_support", "material_support"],
   },
   {
@@ -162,7 +181,7 @@ export const resources: Resource[] = [
     description:
       "Champions the future of children by educating and empowering parents.",
     mapUrl: "https://anchorpoint.us/",
-    imageUrl: stevensonPark,
+    imageUrl: anchorPoint,
     topics: ["children", "prenatal_perinatal", "education"],
   },
   {
@@ -171,7 +190,7 @@ export const resources: Resource[] = [
     description:
       "Provides support for patients in cancer diagnosis-related financial crisis.",
     mapUrl: "https://www.atriumfoundation.org/",
-    imageUrl: stevensonPark,
+    imageUrl: atrium,
     topics: ["local", "medical_care", "financial_support"],
   },
   {
@@ -188,7 +207,7 @@ export const resources: Resource[] = [
     description:
       "Prenatal/perinatal care services in Friendswood.",
     mapUrl: "https://inspiraresourcecenter.com/",
-    imageUrl: stevensonPark,
+    imageUrl: inspira,
     topics: ["local", "prenatal_perinatal", "medical_care", "education"],
   },
   {
@@ -206,7 +225,7 @@ export const resources: Resource[] = [
     description:
       "We offer birthday assistance to families and throw birthday parties in local shelters.",
     mapUrl: "https://thebirthdayjoyprogram.com/",
-    imageUrl: stevensonPark,
+    imageUrl: birthdayJoy,
     topics: ["children", "material_support"],
   },
   {
@@ -215,7 +234,7 @@ export const resources: Resource[] = [
     description:
       "We strive to make mental wellness available for everyone.",
     mapUrl: "https://www.innovativealternatives.org/",
-    imageUrl: stevensonPark,
+    imageUrl: innovative,
     topics: ["medical_care"],
   },
   {
@@ -224,7 +243,7 @@ export const resources: Resource[] = [
     description:
       "Bay Area Council on Drugs and Alcohol. Mental health / recovery assistance.",
     mapUrl: "https://www.bacoda.org/",
-    imageUrl: stevensonPark,
+    imageUrl: BACODA,
     topics: ["addiction", "medical_care", "education"],
   },
 ];
