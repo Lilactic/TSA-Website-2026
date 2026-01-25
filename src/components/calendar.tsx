@@ -74,8 +74,8 @@ const Calendar: React.FC = () => {
             )}
             {selectedEvents.map((event, index) => (
               <div key={index} className={styles.event}>
-                <h4 className={styles.eventTitle}>{event.title}</h4>
-                <p className={styles.eventTime}><Clock size={16} strokeWidth={2}/><span className={styles.eventTimeSpan}>{event.time}</span></p>
+                <h4 className={styles.eventTitle}><span className={styles.eventTextSpan}>{event.title}</span></h4>
+                <p className={styles.eventTime}><Clock size={16} strokeWidth={2}/><span className={styles.eventTextSpan}>{event.time}</span></p>
 
                 {event.mapUrl && (
                   <a className={styles.eventLocation} href={event.mapUrl} target="_blank" rel="noreferrer">
@@ -119,7 +119,7 @@ const Calendar: React.FC = () => {
                 >
                   <div className={`${styles.dayNum} ${isSelected ? styles.today : ""}`}>{dayNum}</div>
 
-                  {numEvents > 0 && (<div className={styles.eventBadge}><p>{numEvents} event(s)</p></div>)}
+                  {numEvents > 0 && (<div className={styles.eventBadge}><p className={styles.eventBadgeText}>{numEvents} event(s)</p></div>)}
                 </div>
               );
             })}

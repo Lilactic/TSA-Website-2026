@@ -48,23 +48,26 @@
 
 .title {
   font-size: 5em;
-  font-family: Bradford LL;
+  font-family: 'inter', sans-serif;
 
   font-weight: 450;
   letter-spacing: -0.04em;
 }
 
-.pdfs {
+.references {
   position: relative;
   width: 100%;
-  padding: 64px 128px 0px 128px;
+  padding: 64px 128px 64px 128px;
   height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
 
 .pdfsContainer {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
   gap: 32px;
   width: 100%;
   border-radius: 16px;
@@ -83,16 +86,33 @@
 }
 
 .subtitle {
-  font-family: Bradford LL;
+  font-family: 'inter', sans-serif;
   font-weight: 450;
-  letter-spacing: -0.02em;
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 .text {
   font-family: 'inter', sans-serif;
   font-weight: 400;
   font-size: 1rem;
+  text-wrap: wrap;
+}
+
+
+.linkText {
+  font-family: 'inter', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  color: var(--secondaryColor);
+  transition: color 0.2s ease;
+  text-decoration: underline;
+}
+
+.linkText:hover {
+  color: var(--accentColor);
+  transition: color 0.2s ease;
 }
 
 .pdfViewerContainer {
@@ -108,13 +128,6 @@
   border: 1.5px solid #D3D3D3;
 }
 
-.perms {
-  position: relative;
-  width: 100%;
-  padding: 32px 128px 0px 128px;
-  height: auto;
-}
-
 .permsContainer {
   display: flex;
   width: 100%;
@@ -127,13 +140,6 @@
   box-shadow: var(--shadow-elevation-medium);
 }
 
-.sources {
-  position: relative;
-  width: 100%;
-  padding: 32px 128px;
-  height: auto;
-}
-
 .sourcesContainer {
   display: flex;
   width: 100%;
@@ -144,10 +150,14 @@
   justify-content: space-between;
   background-color: var(--elementColor);
   box-shadow: var(--shadow-elevation-medium);
+  text-wrap: wrap;
+  overflow: hidden;
+  white-space: wrap;
 }
 
 .emailContainer {
   display: flex;
+  width: 100%;
   flex-direction: column;
   gap: 4px;
   border-radius: 4px;
@@ -161,4 +171,76 @@
   font-weight: 400;
   font-size: .9rem;
   color: #5E5E5E;
+}
+
+@media (min-width: 700px) and (max-width: 900px){
+  .references {
+  position: relative;
+  width: 100%;
+  padding: 32px 64px 32px 64px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  }
+
+  .subtitle {
+    font-family: 'inter', sans-serif;
+    font-weight: 450;
+    font-size: 1.4rem;
+  }
+}
+
+@media(max-width: 700px){
+   .references {
+    position: relative;
+    width: 100%;
+    padding: 32px 64px 32px 64px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .subtitle {
+    font-family: 'inter', sans-serif;
+    font-weight: 450;
+    font-size: 1.5rem;
+  }
+
+  .pdfsContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 32px;
+    border-radius: 16px;
+    background-color: var(--elementColor);
+}
+
+  .pdfSubcontainer {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 16px;
+    padding: 32px;
+    justify-content: space-between;
+    box-shadow: var(--shadow-elevation-medium);
+  }
+
+  .pdfViewerContainer {
+    width: 100%;
+    aspect-ratio: 1/1;
+  }
+}
+
+@media(max-width: 600px){
+  .references {
+    position: relative;
+    width: 100%;
+    padding: 32px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
 }
