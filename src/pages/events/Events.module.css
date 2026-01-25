@@ -48,7 +48,7 @@
 }
 
 .title {
-  font-size: 5em;
+  font-size: clamp(3.4rem, 9vw, 5rem);
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
 
@@ -57,9 +57,7 @@
 }
 
 .subtitle {
-  font-family: 'inter', sans-serif;
-  font-weight: 450;
-  font-size: 1.8rem;
+  font-size: clamp(1.1rem, 3vw, 1.7rem);
 }
 
 @media (max-width: 900px){

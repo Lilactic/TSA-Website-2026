@@ -55,7 +55,7 @@ function References() {
                   Thank you very much for your time and consideration. Please let me know if you have any questions or concerns.
                 </p>
               </div>
-              <p className={styles.text}>And received the following responses:</p>
+              <p className={styles.text}>And several responded with the following:</p>
 
               <div className={styles.emailContainer}>
                 <p className={styles.quoteText}>
