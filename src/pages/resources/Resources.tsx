@@ -7,7 +7,7 @@ import ResourcesSearchItem from '../../components/resourcesSearchItem'
 import { useEffect, useRef, useState } from 'react'
 import { resources } from '../../data/resources'
 import { useSearchParams } from "react-router-dom";
-import { Filter, Trees } from 'lucide-react'
+import { Filter } from 'lucide-react'
 
 import { filterData, type FilterData } from "../../config/filters.tsx";
 import type { Filters } from '../../types/Resources.ts'

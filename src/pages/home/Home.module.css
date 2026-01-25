@@ -11,10 +11,11 @@
 .hero {
   width: 100%;
   height: calc(100vh - var(--navbarHeight));
-
+  padding: 32px 128px;
   position: relative;
-
+  gap: 16px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -50,10 +51,10 @@ background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox=
 }
 
 .title {
-  font-size: 5em;
+  font-size: clamp(3.4rem, 9vw, 5rem);
   font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-
+  font-optical-sizing: auto;
+  width: 100%;
   font-weight: 450;
   letter-spacing: -0.04em;
 }
@@ -67,20 +68,20 @@ background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox=
 }
 
 .subtitle {
+  font-size: clamp(1.1rem, 3vw, 1.7rem);
   margin-bottom: 48px;
 }
 
 .importantInfo {
-  position: absolute;
-  bottom: 128px;
-
   height: auto;
-  width: auto;
-
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
+  text-wrap: wrap;
+  z-index: 1;
+  gap: 16px;
 }
 
 .phoneBox {
@@ -477,12 +478,8 @@ background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox=
 }
 
 @media (max-width: 900px) {
-    .content {
-      width: 100%;
-      padding: 0px 128px;
-
-      white-space: nowrap;
-
+    .hero {
+      padding: 0px 64px;
     }
 
     .importantInfo {
@@ -531,26 +528,22 @@ background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox=
 }
 
 @media (max-width: 700px) {
-  .title {
-    font-size: 4em;
-  }
-
   .descriptionText {
     font-size: 2rem;
   }
 }
 
 @media (max-width: 650px) {
-  .content {
+  .hero {
     padding: 0px 64px;
-  }
-
-  .title {
-    font-size: 3.4em;
   }
 }
 
 @media (max-width: 600px) {
+  .hero {
+    padding: 0px 32px;
+  }
+  
   .callToActionContainer {
     padding: 64px 32px;
   }
@@ -601,10 +594,6 @@ background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox=
 @media (max-width: 500px) {
   .descriptionText {
     font-size: 1.5rem;
-  }
-
-  .title {
-    font-size: 3em;
   }
 
   .projectGrid {

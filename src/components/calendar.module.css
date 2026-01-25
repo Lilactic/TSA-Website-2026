@@ -255,7 +255,7 @@
 }
 }
 
-@media (min-width: 550px) and (max-width: 900px) {
+@media (min-width: 600px) and (max-width: 900px) {
   .calendar {
   position: relative;
   width: 100%;
@@ -509,12 +509,12 @@
 }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 600px) {
   .calendar {
   position: relative;
   width: 100%;
   height: auto;
-  padding: 64px 64px;
+  padding: 64px 32px;
   background-color: var(--primaryColor);
 }
 
