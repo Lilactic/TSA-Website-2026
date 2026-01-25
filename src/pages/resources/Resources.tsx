@@ -7,7 +7,10 @@ import ResourcesSearchItem from '../../components/resourcesSearchItem'
 import { useEffect, useRef, useState } from 'react'
 import { resources } from '../../data/resources'
 import { useSearchParams } from "react-router-dom";
-import { Filter } from 'lucide-react'
+import { Filter, Trees } from 'lucide-react'
+
+import { filterData, type FilterData } from "../../config/filters.tsx";
+import type { Filters } from '../../types/Resources.ts'
 
 
 
@@ -17,6 +20,8 @@ function Resources() {
   const searchHeaderRef = useRef<HTMLDivElement>(null); // ← new ref for search header
   const [stacked, setStacked] = useState(false);
 
+  const [filtersOpen, setFiltersOpen] = useState(false);
+
   const [searchParams, setSearchParams] = useSearchParams();
   
   const initialQuery = searchParams.get("q") || "";
@@ -24,12 +29,6 @@ function Resources() {
   const [searchQuery, setSearchQuery] = useState(initialQuery);
 
   const normalizedQuery = searchQuery.trim().toLowerCase();
-
-  const filteredResources = resources.filter(resource =>
-    resource.title.toLowerCase().includes(normalizedQuery) ||
-    resource.description.toLowerCase().includes(normalizedQuery)
-  );
-
 
   useEffect(() => {
     if (!navRef.current || !sentinelRef.current || !searchHeaderRef.current) return;
@@ -56,6 +55,30 @@ function Resources() {
       setSearchParams({});
     }
   }, [searchQuery, setSearchParams]);
+
+  const [activeFilters, setActiveFilters] = useState<Filters[]>([]);
+
+  const toggleFilter = (key: Filters) => {
+    setActiveFilters(prev =>
+      prev.includes(key)
+        ? prev.filter(f => f !== key)
+        : [...prev, key]
+    );
+  };
+
+  const filteredResources = resources.filter(resource => {
+    const matchesText =
+      resource.title.toLowerCase().includes(normalizedQuery) ||
+      resource.description.toLowerCase().includes(normalizedQuery);
+
+    const matchesFilters =
+      activeFilters.length === 0 ||
+      activeFilters.every(filter =>
+        resource.topics.includes(filter)
+      );
+
+    return matchesText && matchesFilters;
+  });
 
   
   return (
@@ -96,9 +119,33 @@ function Resources() {
               setSearchQuery(query);
             }}/>
           </div>
-          <button className={styles.filterButton}>
-            <Filter size={30} strokeWidth={2} />
-          </button>
+
+          <div style={{position: "relative"}}>
+            <button className={styles.filterButton} onClick={() => {setFiltersOpen(!filtersOpen)}}>
+              <Filter size={30} strokeWidth={2} />
+            </button>
+            <div className={`${styles.popover} ${filtersOpen ? styles.open : styles.closed}`}>
+              {(Object.entries(filterData) as [Filters, FilterData][]).map(
+                ([key, value]) => (
+                  <label className={styles.tagSelector} key={key}>
+                    <input
+                      type="checkbox"
+                      className={styles.checkbox}
+                      checked={activeFilters.includes(key)}
+                      onChange={() => toggleFilter(key)}
+                    />
+
+                    <div className={styles.cardTopic}>
+                      {value.icon}
+                      <div className={styles.hitbox} />
+                      <h4 className={styles.tagText}>{value.label}</h4>
+                    </div>
+                  </label>
+                )
+              )}
+            </div>
+          </div>
+          
         </div>
 
         </section>
@@ -106,9 +153,12 @@ function Resources() {
         <section className={styles.resourceList}>
           <div className={styles.itemGrid}>
 
-            {filteredResources.length === 0 && normalizedQuery && (
-              <h2 className='interHeader'>No resources found. Try changing the search prompt!</h2>
+            {filteredResources.length === 0 && (normalizedQuery || activeFilters.length > 0) && (
+              <h2 className="interHeader">
+                No resources found. Try changing the search prompt!
+              </h2>
             )}
+
 
             {filteredResources.map(resource => (
               <ResourcesSearchItem key={resource.id} {...resource} />
