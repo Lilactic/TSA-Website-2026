@@ -8,9 +8,10 @@
 
 .hero {
   width: 100%;
-  height: calc(50vh - var(--navbarHeight));
+  min-height: 50vh;
+  max-height: 100vh;
   top: 0;
-
+  padding: 32px 128px;
   position: relative;
 
   display: flex;
@@ -47,10 +48,26 @@
 }
 
 .title {
-  font-size: 5em;
+  font-size: clamp(3.4rem, 9vw, 5rem);
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
 
   font-weight: 450;
   letter-spacing: -0.04em;
+}
+
+.subtitle {
+  font-size: clamp(1.1rem, 3vw, 1.7rem);
+}
+
+@media (max-width: 900px){
+  .hero {
+    padding: 32px 64px;
+  }
+}
+
+@media (max-width: 600px){
+  .hero {
+    padding: 32px 32px;
+  }
 }

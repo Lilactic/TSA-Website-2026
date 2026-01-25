@@ -24,7 +24,7 @@ function References() {
           <section className={styles.references}>
             <div className={styles.pdfsContainer}>
               <div className={styles.pdfSubcontainer}>
-                <h1 className={styles.subtitle}>Work Log</h1>
+                <h1 className={styles.refSubtitle}>Work Log</h1>
                 <div className={styles.pdfViewerContainer}>
                   <iframe className={styles.pdfViewer} src={workLog} width="100%" height="500px" title="Student Copyright Checklist">
                     <p>Your browser does not support iframes. You can download the PDF
@@ -55,7 +55,7 @@ function References() {
                   Thank you very much for your time and consideration. Please let me know if you have any questions or concerns.
                 </p>
               </div>
-              <p className={styles.text}>And received the following responses:</p>
+              <p className={styles.text}>And several responded with the following:</p>
 
               <div className={styles.emailContainer}>
                 <p className={styles.quoteText}>
