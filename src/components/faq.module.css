@@ -15,7 +15,6 @@
   grid-auto-flow: column;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(5, minmax(80px, auto));
-
   margin-bottom: 32px;
 }
 
@@ -26,6 +25,7 @@
   width: 100%;
   border-top: 4px solid var(--secondaryColor);
   padding: 16px 16px;
+  cursor: pointer;
 }
 
 .faqCell:nth-child(5n){
@@ -43,8 +43,6 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-
-  cursor: pointer;
 }
 
 .questionText {

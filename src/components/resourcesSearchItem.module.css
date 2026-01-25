@@ -1,5 +1,5 @@
 .gridItem {
-  background-color: var(--primaryColor);
+  background-color: var(--elementColor);
   box-shadow: var(--shadow-elevation-medium);
 
   height: auto;
@@ -52,7 +52,7 @@
 
   height: 48px;
   width: 48px;
-  background-color: var(--primaryColor);
+  background-color: var(--elementColor);
   border: 2px solid var(--secondaryColor);
   border-radius: 16px;
 

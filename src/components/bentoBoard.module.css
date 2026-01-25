@@ -46,9 +46,9 @@
   grid-template-areas:
   "a a"
   "b c"
-  "e d"
   "f d"
-  "f g"
+  "e d"
+  "e g"
   "h i"
   "j j";
 }
@@ -73,9 +73,9 @@
   grid-template-rows: repeat(4, 160px);
   grid-template-areas:
   "a a f b"
-  "d e e b"
-  "d c i i"
-  "j c g h";
+  "d c c b"
+  "d e i i"
+  "j e g h";
 }
 }
 

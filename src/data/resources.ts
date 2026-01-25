@@ -4,7 +4,7 @@ import library from '../assets/images/library.png'
 import pitties1 from '../assets/images/pitties1.jpg'
 import cyber2 from '../assets/images/cyber2.png'
 import shepherdsNook from '../assets/images/shepherdsNook.jpg'
-import park1 from '../assets/images/park1.jpg'
+import centennial from '../assets/images/centennial.jpg'
 import birthdayJoy from '../assets/images/birthdayJoy.jpg'
 import innovative from '../assets/images/innovativeAlternatives.webp'
 import anchorPoint from '../assets/images/anchorPoint.jpg'
@@ -57,7 +57,7 @@ export const resources: Resource[] = [
     description:
       "A local park featuring trails, a basketball court, and many playing fields.",
     mapUrl: "https://www.ci.friendswood.tx.us/480/Centennial-Park",
-    imageUrl: park1,
+    imageUrl: centennial,
     topics: ["local", "park", "sports"],
   },
   {

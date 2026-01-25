@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from './calendar.module.css';
 import { ChevronLeft, ChevronRight, MapPin, Clock } from "lucide-react";
-import eventsList from './eventsItem';
+import eventsList from '../data/eventItem';
 
 const months = [
   "January", "February", "March", "April", "May", "June",
