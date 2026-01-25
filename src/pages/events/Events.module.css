@@ -8,9 +8,10 @@
 
 .hero {
   width: 100%;
-  height: calc(50vh - var(--navbarHeight));
+  min-height: 50vh;
+  max-height: 100vh;
   top: 0;
-
+  padding: 32px 128px;
   position: relative;
 
   display: flex;
@@ -53,4 +54,22 @@
 
   font-weight: 450;
   letter-spacing: -0.04em;
+}
+
+.subtitle {
+  font-family: 'inter', sans-serif;
+  font-weight: 450;
+  font-size: 1.8rem;
+}
+
+@media (max-width: 900px){
+  .hero {
+    padding: 32px 64px;
+  }
+}
+
+@media (max-width: 600px){
+  .hero {
+    padding: 32px 32px;
+  }
 }

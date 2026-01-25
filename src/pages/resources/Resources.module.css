@@ -9,11 +9,11 @@
 
 .hero {
   width: 100%;
-  height: calc(50vh - var(--navbarHeight));
+  min-height: 50vh;
+  max-height: 100vh;
   top: 0;
-
+  padding: 32px 128px;
   position: relative;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,11 +49,17 @@
 
 .title {
   font-size: 5em;
-  font-family: "Inter", sans-serif;
+  font-family: 'inter', sans-serif;
   font-optical-sizing: auto;
 
   font-weight: 450;
   letter-spacing: -0.04em;
+}
+
+.subtitle {
+  font-family: 'inter', sans-serif;
+  font-weight: 450;
+  font-size: 1.8rem;
 }
 
 .searchHeaderBox {
@@ -234,8 +240,11 @@
   line-height: 1.2rem;
 }
 
-
 @media (max-width: 900px) {
+  .hero {
+    padding: 32px 64px;
+  }
+
   .searchHeader {
     padding-left: 64px;
     padding-right: 64px;
@@ -254,18 +263,8 @@
 }
 
 @media (max-width: 800px) {
-  .title {
-    font-size: 3.4em;
-    line-height: 1em;
-    margin-bottom: 16px;
-  }
-
-  .subtitle {
-    font-size: 1em;
-  }
-
-  .content {
-    padding: 0px 32px;
+  .hero {
+    padding: 32px 64px;
   }
 
   .searchBox {
@@ -277,6 +276,10 @@
 }
 
 @media (max-width: 600px) {
+  .hero {
+    padding: 32px 32px;
+  }
+
   .searchHeader {
     padding-left: 32px;
     padding-right: 32px;
@@ -302,11 +305,5 @@
     gap: 16px;
     height: 300px;
     overflow-y: scroll;
-  }
-}
-
-@media (max-width: 500px) {
-  .title {
-    font-size: 3em;
   }
 }

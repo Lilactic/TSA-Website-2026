@@ -551,6 +551,10 @@ background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox=
 }
 
 @media (max-width: 600px) {
+  .title {
+    font-size: 3em;
+  }
+  
   .callToActionContainer {
     padding: 64px 32px;
   }
@@ -601,10 +605,6 @@ background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox=
 @media (max-width: 500px) {
   .descriptionText {
     font-size: 1.5rem;
-  }
-
-  .title {
-    font-size: 3em;
   }
 
   .projectGrid {
