@@ -4,6 +4,7 @@ import SearchBar from '../../components/searchBar'
 import MiniCalendar from '../../components/miniCalendar'
 import FAQ from '../../components/faq'
 import BentoBoard from '../../components/bentoBoard'
+import Slideshow from '../../components/slideshow'
 import '../../global.css'
 import hopeVillage from '../../assets/images/hopeVillage.jpg';
 import stevensonPark from '../../assets/images/stevensonPark.jpg';
@@ -59,83 +60,7 @@ function Home() {
 
           <section className={styles.spotlight}>
             <h1 className={styles.spotlightTitle}>Community Spotlight</h1>
-            <div className={styles.projectGrid}>
-              <div className={styles.projectCard}>
-                <img 
-                  src={hopeVillage}
-                  alt="Hope Village"
-                  className={styles.cardImage}
-                />
-                <div className={styles.cardHeaderGrid}>
-                  <h2 className={styles.cardHeader}>Hope Village</h2>
-                  <Link className={styles.link} to="/resources" style={{textDecoration: "none"}}>
-                    <button className={styles.cardButton}><ArrowUpRight size={32} strokeWidth={2}/></button>
-                  </Link>
-                </div>
-                <div className={styles.cardTagGrid}>
-                  <h3 className={styles.cardTag}>Nonprofit</h3>
-                  <h3 className={styles.cardTag}>Care</h3>
-                  <h3 className={styles.cardTag}>Support</h3>
-                </div>
-              </div>
-
-              <div className={styles.projectCard}>
-                <img 
-                  src={galvestonFoodBank}
-                  alt="Galveston Food Bank"
-                  className={styles.cardImage}
-                />
-                <div className={styles.cardHeaderGrid}>
-                  <h2 className={styles.cardHeader}>Galveston Food Bank</h2>
-                  <Link className={styles.link} to="/resources" style={{textDecoration: "none"}}>
-                    <button className={styles.cardButton}><ArrowUpRight size={32} strokeWidth={2}/></button>
-                  </Link>
-                </div>
-                <div className={styles.cardTagGrid}>
-                  <h3 className={styles.cardTag}>Volunteer</h3>
-                  <h3 className={styles.cardTag}>Nonprofit</h3>
-                  <h3 className={styles.cardTag}>Service</h3>
-                </div>
-              </div>
-
-              <div className={styles.projectCard}>
-                <img 
-                  src={shepherdsNook}
-                  alt="The Shepherd's Nook"
-                  className={styles.cardImage}
-                />
-                <div className={styles.cardHeaderGrid}>
-                  <h2 className={styles.cardHeader}>The Shepherd's Nook</h2>
-                  <Link className={styles.link} to="/resources" style={{textDecoration: "none"}}>
-                    <button className={styles.cardButton}><ArrowUpRight size={32} strokeWidth={2}/></button>
-                  </Link>
-                </div>
-                <div className={styles.cardTagGrid}>
-                  <h3 className={styles.cardTag}>Donation</h3>
-                  <h3 className={styles.cardTag}>Volunteer</h3>
-                  <h3 className={styles.cardTag}>Family</h3>
-                </div>
-              </div>
-
-              <div className={styles.projectCard}>
-                <img 
-                  src={stevensonPark}
-                  alt="Stevenson Park"
-                  className={styles.cardImage}
-                />
-                <div className={styles.cardHeaderGrid}>
-                  <h2 className={styles.cardHeader}>Stevenson Park</h2>
-                  <Link className={styles.link} to="/resources" style={{textDecoration: "none"}}>
-                    <button className={styles.cardButton}><ArrowUpRight size={32} strokeWidth={2}/></button>
-                  </Link>
-                </div>
-                <div className={styles.cardTagGrid}>
-                  <h3 className={styles.cardTag}>Fitness</h3>
-                  <h3 className={styles.cardTag}>Leisure</h3>
-                  <h3 className={styles.cardTag}>Family</h3>
-                </div>
-              </div>
-            </div>
+            <Slideshow />
           </section>
 
           <section className={styles.events}>
