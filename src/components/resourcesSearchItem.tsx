@@ -34,7 +34,7 @@ const ResourcesSearchItem = ({
         </a>
         <div className={styles.cardContent}>
             <h2 className='interHeader' style={{marginBottom: "0.3em"}}>{title}</h2>
-            <h2 className='interDescription' style={{marginBottom: "1em"}}>{description}</h2>
+            <h3 className='interDescription' style={{marginBottom: "1em"}}>{description}</h3>
             <div className={styles.cardTopicBox}>
                 {topics.map(filter => (
                     <div className={styles.cardTopic}>

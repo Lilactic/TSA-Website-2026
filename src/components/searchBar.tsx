@@ -16,7 +16,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
 }) => {
   const [query, setQuery] = useState(initialQuery);
   const [isFocused, setIsFocused] = useState(false);
-  const placeholderText = useTypingEffect(isFocused);
+  const placeholderText = useTypingEffect();
 
   const handleSearch = () => {
     if (onSearch) onSearch(query);

@@ -2,17 +2,21 @@
     height: auto;
     width: 100%;
 
-    background-color: var(--primaryColor);
+    min-height: 50vh;
 
-    border-top: 4px solid var(--secondaryColor);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--secondaryColor);
 }
 
 .topSection {
     height: auto;
     width: 100%;
-    border-bottom: 4px solid var(--secondaryColor);
 
-    padding: 32px;
+    padding: 64px 96px;
     padding-bottom: 64px;
     display: flex;
     justify-content: flex-start;
@@ -55,28 +59,32 @@
 
 .footerLink h3 {
     padding-top: 4px;
-    color: var(--lightTextColor);
+    color: var(--primaryColor);
     transition: 0.05s;
 
     width: 100%;
     flex-grow: 1;
     align-self: stretch;
 
+    font-weight: 300;
+    font-size: 1em;
+
     box-sizing: border-box;
 }
 
 .footerLink h3:hover {
-    color: var(--textColor);
+    color: var(--primaryColor);
     font-weight: 600;
 }
 
 .footerLink h2 {
+    color: var(--primaryColor);
     margin-bottom: 4px;
 }
 
 .footerLink {
     text-decoration: none;
-    color: inherit;
+    color: var(--primaryColor);
 
     display: flex;
     justify-content: center;
@@ -95,7 +103,7 @@
     object-fit: cover;
 
     border-radius: 300px;
-    border: 2px solid var(--secondaryColor);
+    border: 1px solid var(--primaryColor);
 
     margin-right: 16px;
     box-shadow: var(--shadow-elevation-low);
@@ -117,5 +125,7 @@
     justify-content: space-between;
     align-items: center;
 
-    padding: 0px 32px;
+    padding: 0px 96px;
+
+    border-top: 1px solid var(--lightTextColor);
 }

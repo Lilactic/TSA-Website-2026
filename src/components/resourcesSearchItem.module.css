@@ -1,6 +1,6 @@
 .gridItem {
   background-color: var(--elementColor);
-  box-shadow: var(--shadow-elevation-medium);
+  box-shadow: var(--shadow-elevation-low);
 
   height: auto;
   width: 100%;
@@ -80,6 +80,10 @@
   width: 100%;
 
   padding: 18px 16px;
+}
+
+.cardContent h3 {
+  color: var(--darkTextColor);
 }
 
 .cardTopicBox {

@@ -2,9 +2,8 @@ header {
   width: 100%;
   height: var(--navbarHeight);
   background-color: var(--primaryColor);
-  box-shadow: var(--shadow-elevation-medium);
 
-  padding: 0px 128px;
+  padding: 0px 96px;
 
   position: sticky;
   top: 0;
@@ -17,6 +16,28 @@ header {
   z-index: 1000;
 
   transition: 0.2s ease;
+}
+
+.shadow {
+    box-shadow: var(--shadow-elevation-navbar);
+}
+
+.shipWheel {
+  animation: wheelSpin 8s linear infinite;
+  animation-play-state: paused;
+}
+
+.homeLinkBox:hover .shipWheel {
+  animation-play-state: running;
+}
+
+@keyframes wheelSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .navigation {

@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
-const useTypingEffect = (paused: boolean = false) => {
+const useTypingEffect = () => {
   const texts = [
     "community resources...",
     "volunteer opportunities...",
@@ -10,13 +10,30 @@ const useTypingEffect = (paused: boolean = false) => {
     "assistance...",
     "family fun...",
   ];
+
   const typingSpeed = 90;
-  const deletingSpeed = 50;
+  const deletingSpeed = 40;
   const pauseBetweenTexts = 1500;
 
   const [textIndex, setTextIndex] = useState(0);
-  const [displayedText, setDisplayedText] = useState("");
+  const [displayedText, setDisplayedText] = useState(texts[0]);
   const [isDeleting, setIsDeleting] = useState(false);
+  const [paused, setPaused] = useState(document.hidden); // start paused if hidden
+
+  // Pause typing when tab is hidden
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      setPaused(document.hidden);
+      if (document.hidden) {
+        // lock displayedText to full phrase
+        setDisplayedText(texts[textIndex]);
+        setIsDeleting(false);
+      }
+    };
+
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+    return () => document.removeEventListener("visibilitychange", handleVisibilityChange);
+  }, [textIndex, texts]);
 
   useEffect(() => {
     if (paused) return;
@@ -36,13 +53,13 @@ const useTypingEffect = (paused: boolean = false) => {
       timeout = window.setTimeout(() => setIsDeleting(true), pauseBetweenTexts);
     } else if (isDeleting && displayedText.length === 0) {
       timeout = window.setTimeout(() => {
-        setIsDeleting(false);
         setTextIndex(prev => (prev + 1) % texts.length);
+        setIsDeleting(false);
       }, pauseBetweenTexts);
     }
 
     return () => window.clearTimeout(timeout);
-  }, [displayedText, isDeleting, textIndex, paused]);
+  }, [displayedText, isDeleting, textIndex, paused, texts]);
 
   return displayedText;
 };

@@ -1,25 +1,45 @@
 import { Link } from "react-router-dom";
-import { forwardRef, useState } from "react";
-import { TentTree } from "lucide-react";
+import { forwardRef, useState, useEffect } from "react";
+import { ShipWheel, TentTree } from "lucide-react";
 import "../global.css";
 import styles from "./navbar.module.css";
 
 interface NavbarProps {
   stacked?: boolean;
+  shadowOnScroll?: boolean;
 }
 
 const Navbar = forwardRef<HTMLDivElement, NavbarProps>(
-  ({ stacked = false }, ref) => {
+  ({ stacked = false, shadowOnScroll = false }, ref) => {
     const [mobileNavOpen, setMobileNavOpen] = useState(false);
+
+    const [scrolled, setScrolled] = useState(false);
+
+    useEffect(() => {
+      if (!shadowOnScroll) return;
+
+      const handleScroll = () => {
+        setScrolled(window.scrollY > 5);
+      };
+
+      window.addEventListener("scroll", handleScroll);
+      handleScroll();
+
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }, [shadowOnScroll]);
 
     return (
       <>
         <header
           ref={ref}
-          className={`${styles.navbar} ${stacked ? styles.stacked : ""}`}
+          className={`${styles.navbar} 
+          ${stacked ? styles.stacked : ""}
+          ${(!shadowOnScroll || scrolled) ? styles.shadow : ""}`}
         >
-          <Link className={styles.link} to="/" style={{ paddingLeft: "0px" }}>
-            <TentTree size={28} strokeWidth={2} style={{ marginRight: 12 }} />
+          <Link className={`${styles.homeLinkBox} ${styles.link}`} to="/" style={{ paddingLeft: "0px" }}>
+            <ShipWheel size={36} strokeWidth={2} style={{ marginRight: 12 }} className={styles.shipWheel}/>
             <h2 className={`bradfordHeader ${styles.homeLink}`}>
               Friendswood Resources
             </h2>

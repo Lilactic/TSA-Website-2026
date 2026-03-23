@@ -2,13 +2,15 @@
 
 /* Global Styles, affects root element */
 :root {
-    --primaryColor: #F4F6F7;
+    /*--primaryColor: #F4F6F7;*/
+    --primaryColor: #fafaf9;
     --secondaryColor: #050505;
     --accentColor: #8DE8FF;
-    --elementColor: #FFFFFF;
+    --elementColor: #fafaf9;
 
     --textColor: #000000;
-    --lightTextColor: #444444;
+    --lightTextColor: #dadada;
+    --darkTextColor: #2a2a2a;
     
     --navbarHeight: 80px;
     --shadow-color: 0deg 0% 55%;
@@ -35,6 +37,10 @@
     13.9px 27.9px 39.7px -1.1px hsl(var(--shadow-color) / 0.43),
     20.4px 40.8px 58.2px -1.3px hsl(var(--shadow-color) / 0.47),
     29.3px 58.5px 83.4px -1.5px hsl(var(--shadow-color) / 0.51);
+
+  --shadow-elevation-navbar:
+    0 1px 2px hsl(var(--shadow-color) / 0.18),
+    0 4px 8px -2px hsl(var(--shadow-color) / 0.22);
 
     --shadow-elevation-medium-bottom-inset:
         inset 0 6px 6px -6px hsl(var(--shadow-color) / 0.35),
@@ -81,10 +87,38 @@ body {
 }
 
 .interText {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;        /* 20px, multiple of 4 */
+  line-height: 1.75rem;      /* 28px, ratio ≈ 1.4, comfortable */
+  letter-spacing: 0.02em;    /* subtle readability boost */
+  margin: 0;                 /* reset default margins */
+  color: #1a1a1a;            /* dark but not black, easy on eyes */
+}
+
+.whiteInterHeader {
     font-family: 'inter', sans-serif;
-    font-weight: 400;
-    font-size: 1.1rem;
-    line-height: 1.2rem;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: var(--primaryColor);
+}
+
+.whiteInterText {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: 1.25rem;        /* 20px, multiple of 4 */
+  line-height: 1.75rem;      /* 28px, ratio ≈ 1.4, comfortable */
+  letter-spacing: 0.02em;    /* subtle readability boost */
+  margin: 0;                 /* reset default margins */
+  color: var(--primaryColor);            /* dark but not black, easy on eyes */
+}
+
+/* Optional: responsive adjustments for smaller screens */
+@media (max-width: 640px) {
+  .interText {
+    font-size: 1.125rem;     /* 18px */
+    line-height: 1.625rem;   /* 26px */
+  }
 }
 
 .interDescription {
@@ -99,7 +133,7 @@ body {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-weight: 450;
-    letter-spacing: -0.02em;
+    letter-spacing: 0em;
 
     cursor: pointer;
 }

@@ -12,21 +12,103 @@ import shepherdsNook from '../../assets/images/shepherdsNook.jpg';
 import wrench from '../../assets/images/wrench.png'
 import styles from './Home.module.css'
 import holdingHands from '../../assets/images/holdingHands.jpg'
-import { ArrowRight, ArrowUpRight, Phone } from 'lucide-react'
+import heroImg from '../../assets/images/heroSketch.png'
+import { Accessibility, Apple, ArrowRight, ArrowUpRight, Croissant, Phone, Sun } from 'lucide-react'
 import { Link, useNavigate } from 'react-router-dom';
+import BasicButton from '../../components/basicButton'
 
 function Home() {
   const navigate = useNavigate();
-  
+
+  const slides = [
+  {
+    image: stevensonPark,
+    title: "Friendswood Food Bank",
+    icon: <Apple size={24} color='white'/>
+  },
+  {
+    image: shepherdsNook,
+    title: "Shepherd's Nook",
+    icon: <Sun size={24} color='white'/>
+  },
+  {
+    image: galvestonFoodBank,
+    title: "Galveston Food Bank",
+    icon: <Croissant size={24} color='white'/>
+  },
+  {
+    image: hopeVillage,
+    title: "Hope Village",
+    icon: <Accessibility size={24} color='white'/>
+  }
+];
+
   return (
     <>
-        <Navbar />
+        <Navbar shadowOnScroll={false} />
         
         <main className={styles.main}>
-          <section className={styles.hero}>
+          <section className={styles.hero2}>
+            <div className={styles.content}>
+              <h1 className={styles.title}>F<span className={styles.titleKerning}>r</span>iend<span className={styles.titleKerning2}>s</span>wood, TX</h1>
+              <h2 className={`interSubtitle ${styles.subtitle}`}>Community Resource Hub</h2>
+                <SearchBar  initialQuery={""} 
+                  onSearch={(q) => navigate(`/resources?q=${encodeURIComponent(q)}`)}
+                  onChange={() => {}}/>
+              <div className={styles.phoneBox} style={{marginTop: "16px"}}>
+                <Phone size={16} strokeWidth={2} fill='true' style={{flexShrink: "0"}} className={styles.phoneBoxLogo}/>
+                <h3 className='interDescription'>For life-threatening or serious emergencies, call 911</h3>
+              </div>
+            </div>
+            {/*<img className={styles.heroImg} src={heroImg} />*/}
+          </section>
+
+          <div className={styles.slideshowSection}>
+            <div className={styles.track}>
+              {[...slides, ...slides].map((slide, idx) => (
+                <div key={idx} className={styles.imageBox}>
+                  <div className={styles.slideContent}>
+                    {slide.icon && <div className={styles.slideIcon}>{slide.icon}</div>}
+                    <h3 className={`interSubtitle ${styles.slideshowImageTitle}`}>
+                      {slide.title}
+                    </h3>
+                  </div>
+                  <img className={styles.slideshowImage} src={slide.image} />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className={styles.descriptionSection}>
+            <img className={styles.descriptionSectionGraphic} src={heroImg} />
+            <div className={styles.descriptionSectionTextBlock}>
+              <h3 className='interText'>This website was created to connect people with Friendswood's community of non-profits, support services, and public resources. Feel free to browse our database of local resources, and spend some time learning about the history of our city.</h3>
+              <div className={styles.descriptionButtonBox}>
+                <BasicButton />
+              </div>
+            </div>
+          </div>
+
+          <div className={styles.slideshowSection}>
+            <div className={styles.track2}>
+              {[...slides, ...slides].map((slide, idx) => (
+                <div key={idx} className={styles.imageBox}>
+                  <div className={styles.slideContent}>
+                    {slide.icon && <div className={styles.slideIcon}>{slide.icon}</div>}
+                    <h3 className={`interSubtitle ${styles.slideshowImageTitle}`}>
+                      {slide.title}
+                    </h3>
+                  </div>
+                  <img className={styles.slideshowImage} src={slide.image} />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/*<section className={styles.hero}>
             <div 
-              /*src={heroBG} 
-              alt="Background Image"*/
+              src={heroBG} 
+              alt="Background Image"
               className={styles.heroBG}
             />
 
@@ -55,10 +137,10 @@ function Home() {
               className={styles.foodBankImg} 
             />
             <h1 className={styles.descriptionText}>Here at Friendswood's Community Resource Hub, we are dedicated to providing our community with the resources and support needed to thrive.</h1>
-          </section>
+          </section>*/}
 
           <section className={styles.spotlight}>
-            <h1 className={styles.spotlightTitle}>Community Spotlight</h1>
+            <h1 className={styles.spotlightTitle}>Community Spotlights</h1>
             <div className={styles.projectGrid}>
               <div className={styles.projectCard}>
                 <img 
@@ -135,6 +217,45 @@ function Home() {
                   <h3 className={styles.cardTag}>Family</h3>
                 </div>
               </div>
+
+              <div className={styles.projectCard}>
+                <img 
+                  src={stevensonPark}
+                  alt="Stevenson Park"
+                  className={styles.cardImage}
+                />
+                <div className={styles.cardHeaderGrid}>
+                  <h2 className={styles.cardHeader}>Stevenson Park</h2>
+                  <Link className={styles.link} to="/resources" style={{textDecoration: "none"}}>
+                    <button className={styles.cardButton}><ArrowUpRight size={32} strokeWidth={2}/></button>
+                  </Link>
+                </div>
+                <div className={styles.cardTagGrid}>
+                  <h3 className={styles.cardTag}>Fitness</h3>
+                  <h3 className={styles.cardTag}>Leisure</h3>
+                  <h3 className={styles.cardTag}>Family</h3>
+                </div>
+              </div>
+
+              <div className={styles.projectCard}>
+                <img 
+                  src={stevensonPark}
+                  alt="Stevenson Park"
+                  className={styles.cardImage}
+                />
+                <div className={styles.cardHeaderGrid}>
+                  <h2 className={styles.cardHeader}>Stevenson Park</h2>
+                  <Link className={styles.link} to="/resources" style={{textDecoration: "none"}}>
+                    <button className={styles.cardButton}><ArrowUpRight size={32} strokeWidth={2}/></button>
+                  </Link>
+                </div>
+                <div className={styles.cardTagGrid}>
+                  <h3 className={styles.cardTag}>Fitness</h3>
+                  <h3 className={styles.cardTag}>Leisure</h3>
+                  <h3 className={styles.cardTag}>Family</h3>
+                </div>
+              </div>
+
             </div>
           </section>
 
