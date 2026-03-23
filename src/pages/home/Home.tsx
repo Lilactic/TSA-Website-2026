@@ -4,6 +4,7 @@ import SearchBar from '../../components/searchBar'
 import MiniCalendar from '../../components/miniCalendar'
 import FAQ from '../../components/faq'
 import BentoBoard from '../../components/bentoBoard'
+import Slideshow from '../../components/slideshow'
 import '../../global.css'
 import hopeVillage from '../../assets/images/hopeVillage.jpg';
 import stevensonPark from '../../assets/images/stevensonPark.jpg';
@@ -59,83 +60,7 @@ function Home() {
 
           <section className={styles.spotlight}>
             <h1 className={styles.spotlightTitle}>Community Spotlight</h1>
-            <div className={styles.projectGrid}>
-              <div className={styles.projectCard}>
-                <img 
-                  src={hopeVillage}
-                  alt="Hope Village"
-                  className={styles.cardImage}
-                />
-                <div className={styles.cardHeaderGrid}>
-                  <h2 className={styles.cardHeader}>Hope Village</h2>
-                  <Link className={styles.link} to="/resources" style={{textDecoration: "none"}}>
-                    <button className={styles.cardButton}><ArrowUpRight size={32} strokeWidth={2}/></button>
-                  </Link>
-                </div>
-                <div className={styles.cardTagGrid}>
-                  <h3 className={styles.cardTag}>Nonprofit</h3>
-                  <h3 className={styles.cardTag}>Care</h3>
-                  <h3 className={styles.cardTag}>Support</h3>
-                </div>
-              </div>
-
-              <div className={styles.projectCard}>
-                <img 
-                  src={galvestonFoodBank}
-                  alt="Galveston Food Bank"
-                  className={styles.cardImage}
-                />
-                <div className={styles.cardHeaderGrid}>
-                  <h2 className={styles.cardHeader}>Galveston Food Bank</h2>
-                  <Link className={styles.link} to="/resources" style={{textDecoration: "none"}}>
-                    <button className={styles.cardButton}><ArrowUpRight size={32} strokeWidth={2}/></button>
-                  </Link>
-                </div>
-                <div className={styles.cardTagGrid}>
-                  <h3 className={styles.cardTag}>Volunteer</h3>
-                  <h3 className={styles.cardTag}>Nonprofit</h3>
-                  <h3 className={styles.cardTag}>Service</h3>
-                </div>
-              </div>
-
-              <div className={styles.projectCard}>
-                <img 
-                  src={shepherdsNook}
-                  alt="The Shepherd's Nook"
-                  className={styles.cardImage}
-                />
-                <div className={styles.cardHeaderGrid}>
-                  <h2 className={styles.cardHeader}>The Shepherd's Nook</h2>
-                  <Link className={styles.link} to="/resources" style={{textDecoration: "none"}}>
-                    <button className={styles.cardButton}><ArrowUpRight size={32} strokeWidth={2}/></button>
-                  </Link>
-                </div>
-                <div className={styles.cardTagGrid}>
-                  <h3 className={styles.cardTag}>Donation</h3>
-                  <h3 className={styles.cardTag}>Volunteer</h3>
-                  <h3 className={styles.cardTag}>Family</h3>
-                </div>
-              </div>
-
-              <div className={styles.projectCard}>
-                <img 
-                  src={stevensonPark}
-                  alt="Stevenson Park"
-                  className={styles.cardImage}
-                />
-                <div className={styles.cardHeaderGrid}>
-                  <h2 className={styles.cardHeader}>Stevenson Park</h2>
-                  <Link className={styles.link} to="/resources" style={{textDecoration: "none"}}>
-                    <button className={styles.cardButton}><ArrowUpRight size={32} strokeWidth={2}/></button>
-                  </Link>
-                </div>
-                <div className={styles.cardTagGrid}>
-                  <h3 className={styles.cardTag}>Fitness</h3>
-                  <h3 className={styles.cardTag}>Leisure</h3>
-                  <h3 className={styles.cardTag}>Family</h3>
-                </div>
-              </div>
-            </div>
+            <Slideshow />
           </section>
 
           <section className={styles.events}>
@@ -149,35 +74,35 @@ function Home() {
                 <div className={styles.eventCardGrid}>
                   <div className={styles.eventCard}>
                     <div className={styles.dateContainer}>
-                      <h3 className={styles.eventMonth}>Feb</h3>
-                      <h3 className={styles.eventDay}>21</h3>
+                      <h3 className={styles.eventMonth}>Apr</h3>
+                      <h3 className={styles.eventDay}>11</h3>
                     </div>
                     <div className={styles.eventDescContainer}>
-                      <h3 className={styles.eventCardHeader}>Daddy Daughter Dance</h3>
-                      <p className={styles.eventCardDesc}> This special evening includes dinner, dessert, dancing, and lots of boogying—all wrapped up in a night to remember. </p>
+                      <h3 className={styles.eventCardHeader}>Spring Sparkle</h3>
+                      <p className={styles.eventCardDesc}> Join Keep Friendswood Beautiful for the semi-annual community-wide cleanup! </p>
                     </div>
                   </div>
                 </div>
 
                 <div className={styles.eventCard}>
                   <div className={styles.dateContainer}>
-                    <h3 className={styles.eventMonth}>Mar</h3>
-                    <h3 className={styles.eventDay}>9</h3>
+                    <h3 className={styles.eventMonth}>May</h3>
+                    <h3 className={styles.eventDay}>1</h3>
                   </div>
                   <div className={styles.eventDescContainer}>
-                    <h3 className={styles.eventCardHeader}>Friendswood Fish Camp</h3>
-                    <p className={styles.eventCardDesc}> Children and their families will be introduced to the basics of fishing, all while catching fish throughout! </p>
+                    <h3 className={styles.eventCardHeader}>Concert in the Park</h3>
+                    <p className={styles.eventCardDesc}> Join us every Friday in May and June for live performances in the beloved Stevenson Park! There will be raffle prizes during intermission. </p>
                   </div>
                 </div>
 
                 <div className={styles.eventCard}>
                   <div className={styles.dateContainer}>
-                    <h3 className={styles.eventMonth}>Apr</h3>
-                    <h3 className={styles.eventDay}>11</h3>
+                    <h3 className={styles.eventMonth}>May</h3>
+                    <h3 className={styles.eventDay}>2</h3>
                   </div>
                   <div className={styles.eventDescContainer}>
-                    <h3 className={styles.eventCardHeader}>Spring Sparkle</h3>
-                    <p className={styles.eventCardDesc}> Join Keep Friendswood Beautiful on April 11, 2026, for the semi-annual community-wide cleanup! </p>
+                    <h3 className={styles.eventCardHeader}>Youth Fishing Derby</h3>
+                    <p className={styles.eventCardDesc}> Cast your line and reel in the fun, where over 600 pounds of adult catfish will be stocked in the Centennial Park Pond for participants to catch for FREE! </p>
                   </div>
                 </div>
                 
