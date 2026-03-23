@@ -1,0 +1,137 @@
+.slideshowContainer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 48px;
+}
+
+.projectCardContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+}
+
+.slideButton {
+    border: none;
+    background-color: var(--accentColor);
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    border-radius: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 16px;
+    transform: 0.1s ease;
+}
+
+.projectCard {
+  background-color: var(--elementColor);
+  box-shadow: var(--shadow-elevation-medium);
+
+  height: 450px;
+  width: 650px;
+  border-radius: 16px;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  overflow: hidden;
+  cursor: pointer;
+
+  transition: opacity 0.5s ease-in-out;
+}
+
+.imageBox {
+    height: 55%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+.cardImage {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: 0.5s ease;
+}
+
+.cardContent {
+  height: 10px;
+  flex-grow: 1;
+  width: 100%;
+
+  padding: 18px 16px;
+}
+
+.cardHeaderGrid {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardHeader {
+    font-family: 'inter', sans-serif;
+    font-weight: 500;
+    font-size: 1.4rem;
+    width: 300px;
+}
+
+.cardDescription {
+    margin: 24px 0px;
+    font-family: 'inter', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--textColor);
+}
+
+.cardButton {
+  border: 2px solid var(--secondaryColor);
+  background-color: var(--elementColor);
+  cursor: pointer;
+  height: 50px;
+  width: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transform: 0.1s ease;
+}
+
+.cardButton:hover {
+  filter: invert(100);
+  border: 2px solid var(--primaryColor);
+}
+
+.dots {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.dots:hover {
+  cursor: pointer;
+}
+
+.active {
+  color: var(--accentColor);
+}

@@ -88,6 +88,20 @@ function References() {
                   <br/><br/>The Shepherd's Nook 
                 </p>
               </div>
+
+              <div className={styles.emailContainer}>
+                <p className={styles.quoteText}>
+                  You have permission to use anything on our website at www.thebirthdayjoyprogram.com or found on our social media pages. 
+                  <br/><br/>The Birthday Joy Program
+                </p>
+              </div>
+
+              <div className={styles.emailContainer}>
+                <p className={styles.quoteText}>
+                  Thanks for choosing the Forgotten Angels Foundation for your project.
+                  <br/><br/>Forgotten Angels
+                </p>
+              </div>
             </div>
   
             <div className={styles.sourcesContainer}>
