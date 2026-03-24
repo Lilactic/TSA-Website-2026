@@ -107,25 +107,39 @@ function References() {
             <div className={styles.sourcesContainer}>
               <h1 className={styles.refSubtitle}>Sources</h1>
               <p className={styles.quoteText}>"Therapy Room at Resilient Mind Therapies, Leicester" by RMtherapies is licensed under CC BY-SA 4.0. To view a copy of this license, visit <span className={styles.linkText}>https://creativecommons.org/licenses/by-sa/4.0/?ref=openverse.</span></p>
-              <p className={styles.quoteText}>"Birthday Cake" by Will Clayton is licensed under CC BY 2.0. To view a copy of this license, visit <span className={styles.linkText}>https://creativecommons.org/licenses/by/2.0/?ref=openverse.</span></p>
               <p className={styles.quoteText}>"Nashville's Dog Park" by SeeMidTN.com (aka Brent) is licensed under CC BY 2.0. To view a copy of this license, visit <span className={styles.linkText}>https://creativecommons.org/licenses/by/2.0/?ref=openverse.</span></p>
-              <p className={styles.linkText}>https://unsplash.com/photos/people-playing-soccer-on-green-grass-field-during-daytime-vJDbPuxUS_s?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink</p>
-              <p className={styles.linkText}>https://unsplash.com/photos/orange-biplane-9gW_sOssTRw?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink</p>
-              <p className={styles.linkText}>https://unsplash.com/photos/photo-of-two-man-and-one-woman-standing-near-tree-GM5Yn5XRVqA?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink</p>
-              <p className={styles.linkText}>https://unsplash.com/photos/a-person-sitting-in-a-chair-with-a-microphone-in-front-of-a-group-of-people-FK70wR_MAug?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink</p>
-              <p className={styles.linkText}>https://unsplash.com/photos/boy-in-green-sweater-writing-on-white-paper-GDokEYnOfnE?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink</p>
-              <p className={styles.linkText}>https://unsplash.com/photos/brown-wooden-fence-near-green-trees-during-daytime-RzFqGKMT_LY?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink</p>
-              <p className={styles.linkText}>https://unsplash.com/photos/person-holding-belly-photo-NIZeg731LxM?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink</p>
-              <p className={styles.linkText}>https://unsplash.com/photos/a-woman-sitting-on-a-couch-talking-to-another-woman-RqR2pnTpmHA?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink</p>
-              <p className={styles.linkText}>https://unsplash.com/photos/child-sitting-on-bed-yg1Zayn0Few?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink</p>
-              <p className={styles.linkText}>https://unsplash.com/photos/white-and-blue-plastic-packs-WXnBzI7AypY?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink</p>
-              <p className={styles.linkText}>https://unsplash.com/photos/man-in-red-t-shirt-holding-white-plastic-bottle-Cns0h4ypRyA?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink</p>
-              <p className={styles.linkText}>https://unsplash.com/photos/green-and-white-labeled-plastic-bottle-on-brown-wooden-shelf-liOAS02GnfY?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink</p>
-              <p className={styles.linkText}>https://unsplash.com/photos/person-in-red-sweater-holding-babys-hand-Zyx1bK9mqmA?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink</p>
-              <p className={styles.linkText}>https://unsplash.com/photos/people-playing-baseball-on-field-during-daytime-bOU3de50BHk?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink</p>
-              <p className={styles.linkText}>https://unsplash.com/photos/a-baseball-field-with-a-dirt-base-and-grass-y4iEE6J1R88?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink</p>
-              <p className={styles.linkText}>https://unsplash.com/photos/black-metal-bench-near-green-leaf-tree-during-daytime-eydQ76ieKro?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink</p>
-              <p className={styles.linkText}>https://unsplash.com/photos/man-in-gray-hoodie-and-black-pants-sitting-on-black-and-gray-stroller-during-daytime-W5BN80xGhrE?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink</p>
+              <p className={styles.linkText}>Brosa, I. (2020). People playing soccer on green grass field during daytime [Photograph]. Unsplash. https://unsplash.com/photos/people-playing-soccer-on-green-grass-field-during-daytime-vJDbPuxUS_s</p>
+              <p className={styles.linkText}>Day, D. (2019). Orange biplane [Photograph]. Unsplash. https://unsplash.com/photos/orange-biplane-9gW_sOssTRw?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink</p>
+
+              <p className={styles.linkText}>Anderson, N. (2016). Photo of two man and one woman standing near tree [Photograph]. Unsplash. https://unsplash.com/photos/photo-of-two-man-and-one-woman-standing-near-tree-GM5Yn5XRVqA?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink</p>
+
+              <p className={styles.linkText}>Small Giant. (2022). A person sitting in a chair with a microphone in front of a group of people [Photograph]. Unsplash. https://unsplash.com/photos/a-person-sitting-in-a-chair-with-a-microphone-in-front-of-a-group-of-people-FK70wR_MAug?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink</p>
+
+              <p className={styles.linkText}>CDC. (2020). Boy in green sweater writing on white paper [Photograph]. Unsplash. https://unsplash.com/photos/boy-in-green-sweater-writing-on-white-paper-GDokEYnOfnE?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink</p>
+
+              <p className={styles.linkText}>Mossholder, T. (2020). Brown wooden fence near green trees during daytime [Photograph]. Unsplash. https://unsplash.com/photos/brown-wooden-fence-near-green-trees-during-daytime-RzFqGKMT_LY?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink</p>
+
+              <p className={styles.linkText}>Choi, S. (2017). Person holding belly photo [Photograph]. Unsplash. https://unsplash.com/photos/person-holding-belly-photo-NIZeg731LxM?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink</p>
+
+              <p className={styles.linkText}>Gariev, V. (2024). A woman sitting on a couch talking to another woman [Photograph]. Unsplash. https://unsplash.com/photos/a-woman-sitting-on-a-couch-talking-to-another-woman-RqR2pnTpmHA?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink</p>
+
+              <p className={styles.linkText}>National Cancer Institute. (2020). Child sitting on bed [Photograph]. Unsplash. https://unsplash.com/photos/child-sitting-on-bed-yg1Zayn0Few?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink</p>
+
+              <p className={styles.linkText}>Haupt, M. (2020). White and blue plastic packs [Photograph]. Unsplash. https://unsplash.com/photos/white-and-blue-plastic-packs-WXnBzI7AypY?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink</p>
+
+              <p className={styles.linkText}>Paramo, I. (2021). Man in red t-shirt holding white plastic bottle [Photograph]. Unsplash. https://unsplash.com/photos/man-in-red-t-shirt-holding-white-plastic-bottle-Cns0h4ypRyA?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink</p>
+
+              <p className={styles.linkText}>Doucett, A. (2021). Green and white labeled plastic bottle on brown wooden shelf [Photograph]. Unsplash. https://unsplash.com/photos/green-and-white-labeled-plastic-bottle-on-brown-wooden-shelf-liOAS02GnfY?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink</p>
+
+              <p className={styles.linkText}>Busing, H. (2020). Person in red sweater holding babys hand [Photograph]. Unsplash. https://unsplash.com/photos/person-in-red-sweater-holding-babys-hand-Zyx1bK9mqmA?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink</p>
+
+              <p className={styles.linkText}>Espinal, H. (2021). People playing baseball on field during daytime [Photograph]. Unsplash. https://unsplash.com/photos/people-playing-baseball-on-field-during-daytime-bOU3de50BHk?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink</p>
+
+              <p className={styles.linkText}>Hernandez, A. (2021). A baseball field with a dirt base and grass [Photograph]. Unsplash. https://unsplash.com/photos/a-baseball-field-with-a-dirt-base-and-grass-y4iEE6J1R88?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink</p>
+
+              <p className={styles.linkText}>Fousert, M. (2020). Black metal bench near green leaf tree during daytime [Photograph]. Unsplash. https://unsplash.com/photos/black-metal-bench-near-green-leaf-tree-during-daytime-eydQ76ieKro?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink</p>
+
+              <p className={styles.linkText}>Bender, M. (2020). Man in gray hoodie and black pants sitting on black and gray stroller during daytime [Photograph]. Unsplash. https://unsplash.com/photos/man-in-gray-hoodie-and-black-pants-sitting-on-black-and-gray-stroller-during-daytime-W5BN80xGhrE?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink</p>
             </div>
           </section>
         </main>
