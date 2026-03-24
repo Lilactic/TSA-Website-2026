@@ -2,8 +2,8 @@
     height: 100%;
     border-radius: 16px;
     overflow: hidden;
-    box-shadow: var(--shadow-elevation-medium);
     background-color: var(--elementColor);
+    box-shadow: var(--shadow-elevation-medium-low);
 }
 
 .header {

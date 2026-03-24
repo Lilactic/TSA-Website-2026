@@ -8,7 +8,7 @@ import anchorPoint from '../assets/images/anchorPoint.jpg'
 import dogPark from '../assets/images/dogPark.jpg'
 import treasureOfDreams from '../assets/images/treasureOfDreams.jpg'
 import agape from '../assets/images/agape.jpg'
-import inspira from '../assets/images/inspira.jpg'
+import stevenson from '../assets/images/stevensonPark.jpg'
 import maryQueen from '../assets/images/maryQueen.jpg'
 
 const bentoBoard: React.FC = () => {
@@ -38,7 +38,7 @@ return (
             <img src={treasureOfDreams} alt="Friendswood Library" className={styles.bentoImage}/>
         </div>
         <div className={`${styles.bentoCard} ${styles.h}`}>
-            <img src={inspira} alt="Friendswood Library" className={styles.bentoImage}/>
+            <img src={stevenson} alt="Friendswood Library" className={styles.bentoImage}/>
         </div>
         <div className={`${styles.bentoCard} ${styles.i}`}>
             <img src={pitties1} alt="Friendswood Library" className={styles.bentoImage}/>

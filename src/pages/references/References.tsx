@@ -106,8 +106,8 @@ function References() {
   
             <div className={styles.sourcesContainer}>
               <h1 className={styles.refSubtitle}>Sources</h1>
-              <p className={styles.quoteText}>"Therapy Room at Resilient Mind Therapies, Leicester" by RMtherapies is licensed under CC BY-SA 4.0. To view a copy of this license, visit <span className={styles.linkText}>https://creativecommons.org/licenses/by-sa/4.0/?ref=openverse.</span></p>
-              <p className={styles.quoteText}>"Nashville's Dog Park" by SeeMidTN.com (aka Brent) is licensed under CC BY 2.0. To view a copy of this license, visit <span className={styles.linkText}>https://creativecommons.org/licenses/by/2.0/?ref=openverse.</span></p>
+              <p className={styles.quoteText}>All of our sources are formatted in APA format to the best of our ability. All sources are either made by the student researchers, are public domain, or are used with written permission. The home page "Friendswood" sketch was custom-made by the student participants for this website, and is open source.</p>
+
               <p className={styles.linkText}>Brosa, I. (2020). People playing soccer on green grass field during daytime [Photograph]. Unsplash. https://unsplash.com/photos/people-playing-soccer-on-green-grass-field-during-daytime-vJDbPuxUS_s</p>
               <p className={styles.linkText}>Day, D. (2019). Orange biplane [Photograph]. Unsplash. https://unsplash.com/photos/orange-biplane-9gW_sOssTRw?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink</p>
 
@@ -132,6 +132,12 @@ function References() {
               <p className={styles.linkText}>Doucett, A. (2021). Green and white labeled plastic bottle on brown wooden shelf [Photograph]. Unsplash. https://unsplash.com/photos/green-and-white-labeled-plastic-bottle-on-brown-wooden-shelf-liOAS02GnfY?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink</p>
 
               <p className={styles.linkText}>Busing, H. (2020). Person in red sweater holding babys hand [Photograph]. Unsplash. https://unsplash.com/photos/person-in-red-sweater-holding-babys-hand-Zyx1bK9mqmA?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink</p>
+
+              <p className={styles.quoteText}>RMtherapies, (2020). Therapy Room at Resilient Mind Therapies [Photograph]. RMTherapies. <span className={styles.linkText}>https://img1.wsimg.com/isteam/stock/7295/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1160,h:773</span></p>
+              <p className={styles.quoteText}>Brent, L. (2021). Nashville's Dog Park [Photograph]. Your Pets Universe. <span className={styles.linkText}>https://www.yourpetsuniverse.com/wp-content/uploads/2009/05/beauiful_dog_park.jpg</span></p>
+
+              <p className={styles.quoteText}>"Therapy Room at Resilient Mind Therapies, Leicester" by RMtherapies is licensed under CC BY-SA 4.0. To view a copy of this license, visit <span className={styles.linkText}>https://creativecommons.org/licenses/by-sa/4.0/?ref=openverse.</span></p>
+              <p className={styles.quoteText}>"Nashville's Dog Park" by SeeMidTN.com (aka Brent) is licensed under CC BY 2.0. To view a copy of this license, visit <span className={styles.linkText}>https://creativecommons.org/licenses/by/2.0/?ref=openverse.</span></p>
 
               <p className={styles.linkText}>Espinal, H. (2021). People playing baseball on field during daytime [Photograph]. Unsplash. https://unsplash.com/photos/people-playing-baseball-on-field-during-daytime-bOU3de50BHk?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink</p>
 

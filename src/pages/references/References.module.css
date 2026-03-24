@@ -67,7 +67,7 @@
 .references {
   position: relative;
   width: 100%;
-  padding: 64px 128px 64px 128px;
+  padding: 64px 96px 64px 96px;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -106,7 +106,7 @@
   font-family: 'inter', sans-serif;
   font-weight: 400;
   font-size: .9rem;
-  color: var(--lightTextColor);
+  color: var(--darkTextColor);
 }
 
 .linkText {
@@ -115,7 +115,7 @@
   font-size: .9rem;
   overflow-wrap: anywhere;
   word-break: break-word;
-  color: var(--lightTextColor);
+  color: var(--darkTextColor);
   transition: color 0.2s ease;
   text-decoration: underline;
 }

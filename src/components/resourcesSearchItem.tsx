@@ -1,4 +1,4 @@
-import { MapPin } from "lucide-react";
+import { ExternalLink, MapPin } from "lucide-react";
 
 import '../global.css'
 import styles from './resourcesSearchItem.module.css'
@@ -30,7 +30,7 @@ const ResourcesSearchItem = ({
              />
         </div>
         <a href={mapUrl} target="_blank" rel="noreferrer" className={styles.mapCircle}>
-            <MapPin size={30} strokeWidth={2}/>
+            <ExternalLink size={30} strokeWidth={2}/>
         </a>
         <div className={styles.cardContent}>
             <h2 className='interHeader' style={{marginBottom: "0.3em"}}>{title}</h2>

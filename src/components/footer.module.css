@@ -138,3 +138,27 @@
     font-weight: 300;
     font-size: 1em;
 }
+
+@media (max-width: 900px) {
+    .topSection {
+        padding-left: 64px;
+        padding-right: 64px;
+    }
+
+    .bottomSection {
+        padding-left: 64px;
+        padding-right: 64px;
+    }
+}
+
+@media (max-width: 600px) {
+    .topSection {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    .bottomSection {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+}
