@@ -1,5 +1,9 @@
 .button {
+    text-decoration: none;
 
+    border: 2px solid var(--secondaryColor);
+    border-radius: 16px;
+    padding: 12px 28px;
 }
 
 .button h2 {

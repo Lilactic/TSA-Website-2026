@@ -40,6 +40,10 @@
     align-items: flex-start;
 }
 
+.footerColumn h3 {
+    font-weight: 300;
+    font-size: 1em;
+}
 
 .footerColumn2 {
     height: auto;
@@ -128,4 +132,9 @@
     padding: 0px 96px;
 
     border-top: 1px solid var(--lightTextColor);
+}
+
+.bottomSection h2 {
+    font-weight: 300;
+    font-size: 1em;
 }

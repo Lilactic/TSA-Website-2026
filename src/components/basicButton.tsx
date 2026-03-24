@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
 import '../global.css'
-import styles from './footer.module.css'
+import styles from './basicButton.module.css'
 
 function Footer() {
   return (
     <Link className={styles.button} to="/">
-        <h2 className='interText' style={{marginBottom: "0px"}}>Friendswood Resources</h2>
+        <h2 className='interText' style={{marginBottom: "0px"}}>Hello Hello</h2>
     </Link>
   )
 }

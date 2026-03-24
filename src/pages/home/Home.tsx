@@ -17,6 +17,7 @@ import heroImg from '../../assets/images/heroSketch.png'
 import { Accessibility, Apple, ArrowRight, ArrowUpRight, Croissant, Phone, Sun } from 'lucide-react'
 import { Link, useNavigate } from 'react-router-dom';
 import BasicButton from '../../components/basicButton'
+import Parallax from '../../components/parallax'
 
 function Home() {
   const navigate = useNavigate();
@@ -83,9 +84,12 @@ function Home() {
           <div className={styles.descriptionSection}>
             <img className={styles.descriptionSectionGraphic} src={heroImg} />
             <div className={styles.descriptionSectionTextBlock}>
+              <h3 className='interTitle' style={{marginBottom: "24px"}}>Our Mission</h3>
               <h3 className='interText'>This website was created to connect people with Friendswood's community of non-profits, support services, and public resources. Feel free to browse our database of local resources, and spend some time learning about the history of our city.</h3>
               <div className={styles.descriptionButtonBox}>
-                <BasicButton />
+                <Link className={styles.link} to="/contact-us" style={{textDecoration: "none"}}>
+                  <button className={styles.callToActionButton} style={{marginTop: "32px"}}>Find local resources<ArrowRight size={24} strokeWidth={3} style={{marginLeft: "16px"}} className={styles.callToActionButtonIcon}/></button>
+                </Link>
               </div>
             </div>
           </div>
@@ -258,11 +262,12 @@ function Home() {
               </div>
 
             </div>
-            <h1 className={styles.spotlightTitle}>Community Spotlight</h1>
-            <Slideshow />
+            {/*<h1 className={styles.spotlightTitle}>Community Spotlight</h1>
+            <Slideshow />*/}
           </section>
 
           <section className={styles.events}>
+            <Parallax />
             <h2 className={styles.eventsHeader}>Upcoming Events</h2>
             <div className={styles.eventsContentContainer}>
               <div className={styles.calendarContainer}>
@@ -312,19 +317,19 @@ function Home() {
             </div>
           </section>
 
-          <section className={styles.bentoBoard}>
-            <BentoBoard />
-          </section>
-
           <section className={styles.faq}>
             <FAQ />
+          </section>
+
+          <section className={styles.bentoBoard}>
+            <BentoBoard />
           </section>
 
           <section className={styles.callToAction}>
             <div className={styles.callToActionContainer}>
               <h1 className='interTitle'>Building our Community.<br />Together.</h1>
               <Link className={styles.link} to="/contact-us" style={{textDecoration: "none"}}>
-                <button className={styles.callToActionButton}>Make a difference<ArrowRight size={24} strokeWidth={3} style={{marginLeft: "16px"}} className={styles.callToActionButtonIcon}/></button>
+                <button className={styles.callToActionButton} style={{marginTop: "48px"}}>Make a difference<ArrowRight size={24} strokeWidth={3} style={{marginLeft: "16px"}} className={styles.callToActionButtonIcon}/></button>
               </Link>
             </div>
             <img src={wrench} alt="Wrench" className={styles.callToActionImage} />
